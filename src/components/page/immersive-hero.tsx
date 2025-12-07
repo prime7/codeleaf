@@ -11,7 +11,7 @@ import { Card } from "@/components/ui/card"
 export function ImmersiveHero() {
   const [loaded, setLoaded] = useState(false)
   const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 })
-  const [bgLeaves, setBgLeaves] = useState<Array<{
+  const [bgLeaves] = useState<Array<{
     id: number
     left: number
     top: number
@@ -20,21 +20,20 @@ export function ImmersiveHero() {
     rotation: number
     duration: number
     delay: number
-  }>>([])
+  }>>(() => [...Array(15)].map((_, i) => ({
+    id: i,
+    left: Math.random() * 100,
+    top: Math.random() * 100,
+    size: 20 + Math.random() * 30,
+    opacity: 0.02 + Math.random() * 0.04,
+    rotation: Math.random() * 360,
+    duration: 25 + Math.random() * 20,
+    delay: Math.random() * -25,
+  })))
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     // Generate leaves on client side only to prevent hydration mismatch
-    setBgLeaves([...Array(15)].map((_, i) => ({
-      id: i,
-      left: Math.random() * 100,
-      top: Math.random() * 100,
-      size: 20 + Math.random() * 30,
-      opacity: 0.02 + Math.random() * 0.04,
-      rotation: Math.random() * 360,
-      duration: 25 + Math.random() * 20,
-      delay: Math.random() * -25,
-    })))
     setTimeout(() => setLoaded(true), 100)
   }, [])
 

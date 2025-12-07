@@ -3,24 +3,6 @@
 import { useEffect, useRef, useState } from "react"
 import { Card } from "@/components/ui/card"
 
-const philosophies = [
-  {
-    number: "01",
-    title: "Code is craft",
-    description:
-      "Every line matters. We write software like poets write verses — with intention, precision, and beauty.",
-  },
-  {
-    number: "02",
-    title: "Simplicity scales",
-    description: "Complex problems don't need complex solutions. We find the elegant path that others miss.",
-  },
-  {
-    number: "03",
-    title: "Own the outcome",
-    description: "We're not vendors. We're partners. Your success is the only metric that matters.",
-  },
-]
 
 const stats = [
   { value: "50+", label: "Projects" },
@@ -52,7 +34,7 @@ export function PhilosophySection() {
           }`}
         >
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-12">
-            We don't just write code.
+            We don&apos;t just write code.
             <br />
             <span className="text-primary">We grow solutions.</span>
           </h2>

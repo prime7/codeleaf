@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display, Space_Grotesk, JetBrains_Mono } from "next/font/google"
+import { Space_Grotesk, JetBrains_Mono } from "next/font/google"
 import "./globals.css";
 
-const dmSans = DM_Sans({ subsets: ["latin"] })
-const playfair = Playfair_Display({ subsets: ["latin"] })
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
 

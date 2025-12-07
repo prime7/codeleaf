@@ -55,7 +55,7 @@ export function ProcessSection() {
           </div>
 
           <div className="space-y-6">
-            {steps.map((step, index) => (
+            {steps.map((step) => (
               <Card
                 key={step.number}
                 className="group flex gap-6 p-6 hover:border-primary/50 transition-all duration-300"

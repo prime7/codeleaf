@@ -28,9 +28,9 @@ export function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
             <span className="text-sm font-medium text-primary uppercase tracking-wider">Contact</span>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mt-4 mb-6">Let's Start Planning</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mt-4 mb-6">Let&apos;s Start Planning</h2>
             <p className="text-lg text-muted-foreground mb-10">
-              Ready to bring your project to life? Reach out and let's discuss how we can help you achieve your goals.
+              Ready to bring your project to life? Reach out and let&apos;s discuss how we can help you achieve your goals.
             </p>
 
             <div className="space-y-6">

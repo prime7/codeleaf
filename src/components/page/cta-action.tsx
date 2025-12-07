@@ -11,7 +11,7 @@ export function CTASection() {
           Ready to Grow Your Vision?
         </h2>
         <p className="text-lg text-primary-foreground/80 mb-10 max-w-2xl mx-auto">
-          Let's discuss how CodeLeaf can help transform your ideas into powerful, scalable solutions. Your success story
+          Let&apos;s discuss how CodeLeaf can help transform your ideas into powerful, scalable solutions. Your success story
           starts with a conversation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

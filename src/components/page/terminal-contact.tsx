@@ -40,8 +40,8 @@ export function TerminalContact() {
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-12">
           <Leaf size={40} className="mx-auto text-primary mb-6" />
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Let's grow something</h2>
-          <p className="text-muted-foreground text-lg">Tell us about your vision. We'll make it real.</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Let&apos;s grow something</h2>
+          <p className="text-muted-foreground text-lg">Tell us about your vision. We&apos;ll make it real.</p>
         </div>
 
         {/* Terminal contact form */}
@@ -77,7 +77,7 @@ export function TerminalContact() {
             <div className="text-center py-12">
               <CheckCircle2 size={56} className="mx-auto text-primary mb-6" />
               <h3 className="text-2xl font-bold text-foreground mb-2">Message sent</h3>
-              <p className="text-muted-foreground">We'll be in touch within 24 hours.</p>
+              <p className="text-muted-foreground">We&apos;ll be in touch within 24 hours.</p>
             </div>
           ) : showForm ? (
             <form onSubmit={handleSubmit} className="space-y-6">

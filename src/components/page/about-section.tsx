@@ -2,6 +2,7 @@
 
 import { Users, Award, Clock, Leaf } from "lucide-react"
 import { Card } from "@/components/ui/card"
+import Image from "next/image"
 
 const stats = [
   { icon: Users, value: "50+", label: "Clients Served" },
@@ -17,7 +18,7 @@ export function AboutSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="aspect-square rounded-3xl overflow-hidden bg-primary/10">
-              <img src="/diverse-team-of-developers-collaborating-in-modern.jpg" alt="CodeLeaf Team" className="w-full h-full object-cover" />
+              <Image src="/diverse-team-of-developers-collaborating-in-modern.jpg" alt="CodeLeaf Team" width={400} height={400} className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-8 -right-8 bg-primary text-primary-foreground p-8 rounded-2xl shadow-xl">
               <p className="font-serif text-3xl font-bold">2016</p>
@@ -34,7 +35,7 @@ export function AboutSection() {
               building solutions that stand the test of time.
             </p>
             <p className="text-lg text-muted-foreground mb-10">
-              We're not just developers—we're partners in your success. Every line of code we write, every system we
+              We&apos;re not just developers—we&apos;re partners in your success. Every line of code we write, every system we
               architect, is designed with your long-term growth in mind.
             </p>
 

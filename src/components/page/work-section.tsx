@@ -2,6 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react"
 import { Card } from "@/components/ui/card"
+import Image from "next/image"
 
 const projects = [
   {
@@ -31,7 +32,7 @@ export function WorkSection() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
           <div>
             <span className="text-sm font-medium text-primary uppercase tracking-wider">Our Work</span>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mt-4">Projects We've Cultivated</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mt-4">Projects We&apos;ve Cultivated</h2>
           </div>
           <a href="#" className="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all">
             View All Projects <ArrowUpRight className="w-4 h-4" />
@@ -42,9 +43,11 @@ export function WorkSection() {
           {projects.map((project) => (
             <Card key={project.title} className="group cursor-pointer overflow-hidden p-0">
               <div className="relative overflow-hidden">
-                <img
+                <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
+                  width={400}
+                  height={300}
                   className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
