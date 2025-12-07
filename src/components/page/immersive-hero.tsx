@@ -59,6 +59,7 @@ export function ImmersiveHero() {
   const primaryButton = hero.buttons?.primary
   const secondaryButton = hero.buttons?.secondary
   const leaves = prefersReducedMotion ? [] : bgLeaves
+  const services = (hero.services ?? []) as Array<{ label: string; icon: keyof typeof serviceIconMap }>
 
   return (
     <section
@@ -176,7 +177,7 @@ export function ImmersiveHero() {
           {hero.tagline}
         </p>
 
-        {hero.services?.length ? (
+        {services.length ? (
           <div
             className="flex flex-wrap justify-center gap-3 mb-12 max-w-2xl mx-auto"
             style={{
@@ -185,7 +186,7 @@ export function ImmersiveHero() {
               transition: prefersReducedMotion ? "none" : "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s",
             }}
           >
-            {hero.services.map((service, i) => {
+            {services.map((service, i) => {
               const Icon = serviceIconMap[service.icon as keyof typeof serviceIconMap]
               return (
                 <Card
