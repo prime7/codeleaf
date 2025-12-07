@@ -3,14 +3,19 @@
 import type React from "react"
 
 import { useEffect, useState, useRef } from "react"
+import Link from "next/link"
 import { ArrowRight, Leaf, Code, Database, Globe, Smartphone, Shield, Cloud } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
+import siteContent from "@/site.json"
+
+const serviceIconMap = { Code, Smartphone, Database, Cloud, Shield, Globe } as const
 
 export function ImmersiveHero() {
   const [loaded, setLoaded] = useState(false)
   const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 })
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
   const [bgLeaves] = useState<Array<{
     id: number
     left: number
@@ -33,8 +38,12 @@ export function ImmersiveHero() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Generate leaves on client side only to prevent hydration mismatch
     setTimeout(() => setLoaded(true), 100)
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)")
+    setPrefersReducedMotion(media.matches)
+    const handleChange = () => setPrefersReducedMotion(media.matches)
+    media.addEventListener("change", handleChange)
+    return () => media.removeEventListener("change", handleChange)
   }, [])
 
   const handleMouseMove = (e: React.MouseEvent) => {
@@ -46,20 +55,10 @@ export function ImmersiveHero() {
     })
   }
 
-  const services = [
-    { icon: Code, label: "Web Apps" },
-    { icon: Smartphone, label: "Mobile" },
-    { icon: Database, label: "Backend" },
-    { icon: Cloud, label: "Cloud" },
-    { icon: Shield, label: "Security" },
-    { icon: Globe, label: "Deployment" },
-  ]
-
-  const stats = [
-    { value: "50+", label: "Projects" },
-    { value: "98%", label: "Satisfaction" },
-    { value: "5+", label: "Years" },
-  ]
+  const { hero, brand } = siteContent
+  const primaryButton = hero.buttons?.primary
+  const secondaryButton = hero.buttons?.secondary
+  const leaves = prefersReducedMotion ? [] : bgLeaves
 
   return (
     <section
@@ -69,7 +68,7 @@ export function ImmersiveHero() {
     >
       {/* Floating leaf background */}
       <div className="absolute inset-0 pointer-events-none">
-        {bgLeaves.map((leaf) => (
+        {leaves.map((leaf) => (
           <div
             key={leaf.id}
             className="absolute"
@@ -77,7 +76,7 @@ export function ImmersiveHero() {
               left: `${leaf.left}%`,
               top: `${leaf.top}%`,
               opacity: leaf.opacity,
-              animation: `float-gentle ${leaf.duration}s ease-in-out infinite`,
+              animation: prefersReducedMotion ? "none" : `float-gentle ${leaf.duration}s ease-in-out infinite`,
               animationDelay: `${leaf.delay}s`,
             }}
           >
@@ -94,29 +93,28 @@ export function ImmersiveHero() {
         ))}
       </div>
 
-      {/* Subtle mouse-following glow */}
       <div
         className="absolute w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none transition-all duration-1000 ease-out"
         style={{
           left: `${mousePos.x * 100}%`,
           top: `${mousePos.y * 100}%`,
           transform: "translate(-50%, -50%)",
-          opacity: loaded ? 1 : 0,
+          opacity: loaded && !prefersReducedMotion ? 1 : 0,
+          transition: prefersReducedMotion ? "none" : "all 1s ease-out",
         }}
       />
 
-      {/* Main content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
         <div
           style={{
             opacity: loaded ? 1 : 0,
             transform: `translateY(${loaded ? 0 : 20}px)`,
-            transition: "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s",
+            transition: prefersReducedMotion ? "none" : "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s",
           }}
         >
           <Badge variant="outline" className="mb-8 px-4 py-2 border-primary/20 bg-primary/5">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse mr-2" />
-            Available for new projects
+            {hero.badge}
           </Badge>
         </div>
 
@@ -126,7 +124,7 @@ export function ImmersiveHero() {
           style={{
             opacity: loaded ? 1 : 0,
             transform: `translateY(${loaded ? 0 : 30}px) scale(${loaded ? 1 : 0.8})`,
-            transition: "all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s",
+            transition: prefersReducedMotion ? "none" : "all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s",
           }}
         >
           <div className="relative">
@@ -138,7 +136,7 @@ export function ImmersiveHero() {
                 top: "50%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
-                animation: "pulse 3s ease-in-out infinite",
+                animation: prefersReducedMotion ? "none" : "pulse 3s ease-in-out infinite",
               }}
             />
             <div className="relative p-6">
@@ -159,11 +157,11 @@ export function ImmersiveHero() {
           style={{
             opacity: loaded ? 1 : 0,
             transform: `translateY(${loaded ? 0 : 30}px)`,
-            transition: "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s",
+            transition: prefersReducedMotion ? "none" : "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s",
           }}
         >
-          <span className="text-foreground">code</span>
-          <span className="text-primary">leaf</span>
+          <span className="text-foreground">{brand.lowercasePrimary}</span>
+          <span className="text-primary">{brand.lowercaseSecondary}</span>
         </h1>
 
         {/* Tagline */}
@@ -172,64 +170,78 @@ export function ImmersiveHero() {
           style={{
             opacity: loaded ? 1 : 0,
             transform: `translateY(${loaded ? 0 : 20}px)`,
-            transition: "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s",
+            transition: prefersReducedMotion ? "none" : "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s",
           }}
         >
-          Custom technical solutions that grow with your business
+          {hero.tagline}
         </p>
 
-        <div
-          className="flex flex-wrap justify-center gap-3 mb-12 max-w-2xl mx-auto"
-          style={{
-            opacity: loaded ? 1 : 0,
-            transform: `translateY(${loaded ? 0 : 20}px)`,
-            transition: "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s",
-          }}
-        >
-          {services.map((service, i) => (
-            <Card
-              key={service.label}
-              className="group flex items-center gap-2 px-4 py-2 bg-card/50 border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 cursor-default"
-              style={{
-                animationDelay: `${i * 0.1}s`,
-              }}
-            >
-              <service.icon className="w-4 h-4 text-primary/70 group-hover:text-primary transition-colors" />
-              <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                {service.label}
-              </span>
-            </Card>
-          ))}
-        </div>
+        {hero.services?.length ? (
+          <div
+            className="flex flex-wrap justify-center gap-3 mb-12 max-w-2xl mx-auto"
+            style={{
+              opacity: loaded ? 1 : 0,
+              transform: `translateY(${loaded ? 0 : 20}px)`,
+              transition: prefersReducedMotion ? "none" : "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s",
+            }}
+          >
+            {hero.services.map((service, i) => {
+              const Icon = serviceIconMap[service.icon as keyof typeof serviceIconMap]
+              return (
+                <Card
+                  key={service.label}
+                  className="group flex items-center gap-2 px-4 py-2 bg-card/50 border-border/50 hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 cursor-default"
+                  style={{
+                    animationDelay: `${i * 0.1}s`,
+                    transition: prefersReducedMotion ? "none" : undefined,
+                  }}
+                >
+                  {Icon && <Icon className="w-4 h-4 text-primary/70 group-hover:text-primary transition-colors" />}
+                  <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+                    {service.label}
+                  </span>
+                </Card>
+              )
+            })}
+          </div>
+        ) : (
+          <div className="mb-12" />
+        )}
 
-        <div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
-          style={{
-            opacity: loaded ? 1 : 0,
-            transform: `translateY(${loaded ? 0 : 20}px)`,
-            transition: "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s",
-          }}
-        >
-          <Button size="lg" className="group rounded-full px-8 h-14 text-base" asChild>
-            <a href="#contact">
-              Start Your Project
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-            </a>
-          </Button>
-          <Button size="lg" variant="outline" className="rounded-full px-8 h-14 text-base bg-transparent" asChild>
-            <a href="#projects">View Our Work</a>
-          </Button>
-        </div>
+        {(primaryButton || secondaryButton) && (
+          <div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+            style={{
+              opacity: loaded ? 1 : 0,
+              transform: `translateY(${loaded ? 0 : 20}px)`,
+              transition: prefersReducedMotion ? "none" : "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s",
+            }}
+          >
+            {primaryButton && (
+              <Button size="lg" className="group rounded-full px-8 h-14 text-base" asChild>
+                <Link href={primaryButton.href}>
+                  {primaryButton.label}
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            )}
+            {secondaryButton && (
+              <Button size="lg" variant="outline" className="rounded-full px-8 h-14 text-base bg-transparent" asChild>
+                <Link href={secondaryButton.href}>{secondaryButton.label}</Link>
+              </Button>
+            )}
+          </div>
+        )}
 
         <div
           className="flex flex-wrap justify-center gap-4"
           style={{
             opacity: loaded ? 1 : 0,
             transform: `translateY(${loaded ? 0 : 20}px)`,
-            transition: "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s",
+            transition: prefersReducedMotion ? "none" : "all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.7s",
           }}
         >
-          {stats.map((stat) => (
+          {hero.stats.map((stat) => (
             <Card key={stat.label} className="px-6 py-4 bg-card/30 border-border/30 text-center">
               <div className="text-2xl sm:text-3xl font-bold text-primary mb-1">{stat.value}</div>
               <div className="text-xs text-muted-foreground uppercase tracking-wider">{stat.label}</div>
@@ -242,12 +254,12 @@ export function ImmersiveHero() {
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
           style={{
             opacity: loaded ? 0.4 : 0,
-            transition: "opacity 1s ease 1s",
+            transition: prefersReducedMotion ? "none" : "opacity 1s ease 1s",
           }}
         >
           <div className="flex flex-col items-center gap-2">
             <div className="w-px h-8 bg-gradient-to-b from-transparent via-foreground/30 to-foreground/50" />
-            <span className="text-xs text-muted-foreground tracking-widest uppercase">Scroll</span>
+            <span className="text-xs text-muted-foreground tracking-widest uppercase">{hero.scrollLabel}</span>
           </div>
         </div>
       </div>
@@ -257,7 +269,7 @@ export function ImmersiveHero() {
         className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"
         style={{
           opacity: loaded ? 1 : 0,
-          transition: "opacity 1s ease 1s",
+          transition: prefersReducedMotion ? "none" : "opacity 1s ease 1s",
         }}
       />
     </section>

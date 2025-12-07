@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "title": "CodeLeaf | Custom technical solutions that grow with you",
+    "description": "CodeLeaf crafts bespoke web, mobile, cloud, and data solutions grounded in deep technical expertise."
+  },
+  "brand": {
+    "name": "CodeLeaf",
+    "primary": "Code",
+    "secondary": "Leaf",
+    "lowercasePrimary": "code",
+    "lowercaseSecondary": "leaf",
+    "email": "hello@codeleaf.ca",
+    "tagline": "Technology That Grows With You"
+  },
+  "navigation": {
+    "ctaLabel": "Start a Project",
+    "ctaHref": "#contact",
+    "links": [
+      { "label": "Capabilities", "href": "#capabilities" },
+      { "label": "Work", "href": "#projects" },
+      { "label": "About", "href": "#philosophy" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
+  "hero": {
+    "badge": "Available for new projects",
+    "tagline": "Custom technical solutions that grow with your business",
+    "services": [],
+    "buttons": {
+      "primary": { "label": "Start Your Project", "href": "#contact" },
+      "secondary": { "label": "View Our Work", "href": "#projects" }
+    },
+    "stats": [
+      { "value": "50+", "label": "Projects" },
+      { "value": "98%", "label": "Satisfaction" },
+      { "value": "5+", "label": "Years" }
+    ],
+    "scrollLabel": "Scroll"
+  },
+  "capabilities": {
+    "heading": "What we",
+    "highlight": "build",
+    "description": "End-to-end technical solutions that transform businesses.",
+    "items": [
+      {
+        "id": "web",
+        "icon": "Code2",
+        "title": "Web Applications",
+        "description": "Full-stack apps that scale. React, Next.js, Node.js.",
+        "tech": ["React", "Next.js", "TypeScript"]
+      },
+      {
+        "id": "api",
+        "icon": "Database",
+        "title": "API Architecture",
+        "description": "RESTful and GraphQL APIs built for performance.",
+        "tech": ["REST", "GraphQL", "PostgreSQL"]
+      },
+      {
+        "id": "cloud",
+        "icon": "Cloud",
+        "title": "Cloud Infrastructure",
+        "description": "Scalable, resilient infrastructure that just works.",
+        "tech": ["AWS", "Docker", "Kubernetes"]
+      },
+      {
+        "id": "security",
+        "icon": "Shield",
+        "title": "Security First",
+        "description": "Enterprise-grade security baked in from day one.",
+        "tech": ["OAuth", "Encryption", "Auditing"]
+      },
+      {
+        "id": "ai",
+        "icon": "Cpu",
+        "title": "AI Integration",
+        "description": "Intelligent features powered by cutting-edge ML.",
+        "tech": ["OpenAI", "LangChain", "Vector DB"]
+      },
+      {
+        "id": "systems",
+        "icon": "Layers",
+        "title": "System Design",
+        "description": "Complex systems made simple. Any scale.",
+        "tech": ["Microservices", "Event Sourcing", "DDD"]
+      }
+    ]
+  },
+  "projectsShowcase": {
+    "title": "Selected",
+    "highlight": "work",
+    "projects": [
+      {
+        "id": 1,
+        "name": "NEXUS",
+        "category": "Enterprise Platform",
+        "description": "Digital transformation for Fortune 500 logistics. Real-time tracking & predictive analytics.",
+        "metrics": { "users": "50K+", "uptime": "99.99%" },
+        "color": "145",
+        "href": "https://codeleaf.ca/case-studies/nexus"
+      },
+      {
+        "id": 2,
+        "name": "QUANTUM",
+        "category": "Fintech",
+        "description": "High-frequency trading platform. Sub-millisecond latency with bulletproof security.",
+        "metrics": { "tps": "1M+", "volume": "$8B" },
+        "color": "160",
+        "href": "https://codeleaf.ca/case-studies/quantum"
+      },
+      {
+        "id": 3,
+        "name": "VERTEX",
+        "category": "AI/ML Platform",
+        "description": "Automated document processing. 95% accuracy on complex legal documents.",
+        "metrics": { "accuracy": "95%", "docs": "10M+" },
+        "color": "130",
+        "href": "https://codeleaf.ca/case-studies/vertex"
+      }
+    ]
+  },
+  "philosophy": {
+    "title": "We don't just write code.",
+    "highlight": "We grow solutions.",
+    "description": "Like a leaf, every project needs the right environment to thrive. We provide the expertise, care, and technical foundation for your ideas to flourish.",
+    "stats": [
+      { "value": "50+", "label": "Projects" },
+      { "value": "99%", "label": "Retention" },
+      { "value": "8+", "label": "Years" }
+    ]
+  },
+  "contact": {
+    "title": "Let's grow something",
+    "subtitle": "Tell us about your vision. We'll make it real.",
+    "loadingText": "Loading form interface...",
+    "processingText": "Processing request...",
+    "commandHistory": [
+      { "cmd": "codeleaf --help", "response": "Available commands: contact, projects, about" },
+      { "cmd": "codeleaf contact --init", "response": "Initializing contact form..." }
+    ],
+    "commandTemplate": "codeleaf contact --send --name=\"{name}\" --email=\"{email}\"",
+    "form": {
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "project": "Project details"
+      },
+      "placeholders": {
+        "name": "Your name",
+        "email": "you@company.com",
+        "project": "Tell us about your project..."
+      },
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "successTitle": "Message sent",
+      "successSubtitle": "We'll be in touch within 24 hours."
+    }
+  },
+  "footer": {
+    "description": "Growing custom technical solutions that help businesses thrive. Based in Canada, cultivating ideas globally.",
+    "headings": {
+      "navigation": "Navigate",
+      "connect": "Connect"
+    },
+    "navigation": [
+      { "label": "Capabilities", "href": "#capabilities" },
+      { "label": "Work", "href": "#projects" },
+      { "label": "About", "href": "#philosophy" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "connect": [
+      { "label": "GitHub", "href": "#" },
+      { "label": "LinkedIn", "href": "#" },
+      { "label": "Twitter", "href": "#" }
+    ],
+    "status": "Systems operational"
+  }
+}
+

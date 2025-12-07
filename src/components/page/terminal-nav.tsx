@@ -1,12 +1,14 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Leaf } from "lucide-react"
+import Link from "next/link"
+import { Leaf } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import siteContent from "@/site.json"
 
 export function TerminalNav() {
-  const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { brand, navigation } = siteContent
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50)
@@ -18,13 +20,13 @@ export function TerminalNav() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-primary/10 shadow-[0_4px_30px_oklch(0_0_0_/_0.1)]"
+          ? "bg-background/80 backdrop-blur-xl border-b border-primary/10 shadow-[0_4px_30px_oklch(0_0_0/0.1)]"
           : ""
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-8 h-8 flex items-center justify-center">
               <Leaf
                 size={22}
@@ -32,52 +34,24 @@ export function TerminalNav() {
               />
             </div>
             <span className="font-semibold text-xl tracking-tight">
-              <span className="text-primary">Code</span>
-              <span className="text-foreground">Leaf</span>
+              <span className="text-primary">{brand.primary}</span>
+              <span className="text-foreground">{brand.secondary}</span>
             </span>
-          </a>
+          </Link>
 
-          <div className="hidden md:flex items-center">
+          <div className="flex items-center gap-3">
             <Button
               asChild
               variant="outline"
               className="group flex items-center gap-2 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
-              <a href="#contact">
+              <Link href={navigation.ctaHref}>
                 <span className="w-1.5 h-1.5 bg-primary rounded-full group-hover:bg-primary-foreground transition-colors" />
-                Start a Project
-              </a>
+                {navigation.ctaLabel}
+              </Link>
             </Button>
           </div>
-
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground p-2 hover:text-primary transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-
-        {/* Mobile menu overlay */}
-        {isOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-xl border-b border-primary/10 p-6">
-            <div className="flex flex-col gap-4">
-              <Button
-                asChild
-                className="w-full"
-              >
-                <a
-                  href="#contact"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Start a Project
-                </a>
-              </Button>
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   )

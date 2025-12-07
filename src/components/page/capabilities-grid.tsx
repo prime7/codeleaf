@@ -3,56 +3,15 @@
 import { useState, useRef, useEffect } from "react"
 import { Code2, Database, Cloud, Shield, Cpu, Layers } from "lucide-react"
 import { Card } from "@/components/ui/card"
+import siteContent from "@/site.json"
 
-const capabilities = [
-  {
-    id: "web",
-    icon: Code2,
-    title: "Web Applications",
-    description: "Full-stack apps that scale. React, Next.js, Node.js.",
-    tech: ["React", "Next.js", "TypeScript"],
-  },
-  {
-    id: "api",
-    icon: Database,
-    title: "API Architecture",
-    description: "RESTful and GraphQL APIs built for performance.",
-    tech: ["REST", "GraphQL", "PostgreSQL"],
-  },
-  {
-    id: "cloud",
-    icon: Cloud,
-    title: "Cloud Infrastructure",
-    description: "Scalable, resilient infrastructure that just works.",
-    tech: ["AWS", "Docker", "Kubernetes"],
-  },
-  {
-    id: "security",
-    icon: Shield,
-    title: "Security First",
-    description: "Enterprise-grade security baked in from day one.",
-    tech: ["OAuth", "Encryption", "Auditing"],
-  },
-  {
-    id: "ai",
-    icon: Cpu,
-    title: "AI Integration",
-    description: "Intelligent features powered by cutting-edge ML.",
-    tech: ["OpenAI", "LangChain", "Vector DB"],
-  },
-  {
-    id: "systems",
-    icon: Layers,
-    title: "System Design",
-    description: "Complex systems made simple. Any scale.",
-    tech: ["Microservices", "Event Sourcing", "DDD"],
-  },
-]
+const capabilityIconMap = { Code2, Database, Cloud, Shield, Cpu, Layers } as const
 
 export function CapabilitiesGrid() {
   const [activeId, setActiveId] = useState<string | null>(null)
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
+  const { capabilities } = siteContent
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -70,16 +29,14 @@ export function CapabilitiesGrid() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            What we <span className="text-primary">build</span>
+            {capabilities.heading} <span className="text-primary">{capabilities.highlight}</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto text-lg">
-            End-to-end technical solutions that transform businesses.
-          </p>
+          <p className="text-muted-foreground max-w-xl mx-auto text-lg">{capabilities.description}</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {capabilities.map((cap, index) => {
-            const Icon = cap.icon
+          {capabilities.items.map((cap, index) => {
+            const Icon = capabilityIconMap[cap.icon as keyof typeof capabilityIconMap]
             const isActive = activeId === cap.id
 
             return (

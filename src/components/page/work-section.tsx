@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { ArrowUpRight } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import Image from "next/image"
@@ -34,9 +35,9 @@ export function WorkSection() {
             <span className="text-sm font-medium text-primary uppercase tracking-wider">Our Work</span>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mt-4">Projects We&apos;ve Cultivated</h2>
           </div>
-          <a href="#" className="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all">
+          <Link href="#" className="text-primary font-medium flex items-center gap-2 hover:gap-3 transition-all">
             View All Projects <ArrowUpRight className="w-4 h-4" />
-          </a>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

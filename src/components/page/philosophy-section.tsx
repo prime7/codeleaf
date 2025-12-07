@@ -2,17 +2,12 @@
 
 import { useEffect, useRef, useState } from "react"
 import { Card } from "@/components/ui/card"
-
-
-const stats = [
-  { value: "50+", label: "Projects" },
-  { value: "99%", label: "Retention" },
-  { value: "8+", label: "Years" },
-]
+import siteContent from "@/site.json"
 
 export function PhilosophySection() {
   const sectionRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const { philosophy } = siteContent
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,19 +29,18 @@ export function PhilosophySection() {
           }`}
         >
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-12">
-            We don&apos;t just write code.
+            {philosophy.title}
             <br />
-            <span className="text-primary">We grow solutions.</span>
+            <span className="text-primary">{philosophy.highlight}</span>
           </h2>
 
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-16">
-            Like a leaf, every project needs the right environment to thrive. We provide the expertise, care, and
-            technical foundation for your ideas to flourish.
+            {philosophy.description}
           </p>
 
           {/* Stats row */}
           <div className="flex justify-center gap-12 md:gap-20">
-            {stats.map((stat, index) => (
+            {philosophy.stats.map((stat, index) => (
               <Card
                 key={stat.label}
                 className={`text-center p-6 transition-all duration-700 ${

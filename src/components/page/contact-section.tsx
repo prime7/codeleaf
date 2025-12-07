@@ -3,6 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -40,9 +41,9 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <a href="mailto:hello@codeleaf.ca" className="font-medium hover:text-primary transition-colors">
+                  <Link href="mailto:hello@codeleaf.ca" className="font-medium hover:text-primary transition-colors">
                     hello@codeleaf.ca
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -51,9 +52,9 @@ export function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Phone</p>
-                  <a href="tel:+14165551234" className="font-medium hover:text-primary transition-colors">
+                  <Link href="tel:+14165551234" className="font-medium hover:text-primary transition-colors">
                     +1 (416) 555-1234
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="flex items-center gap-4">
