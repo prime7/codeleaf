@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "CodeLeaf | Custom technical solutions that grow with you",
-    "description": "CodeLeaf crafts bespoke web, mobile, cloud, and data solutions grounded in deep technical expertise."
+    "title": "CodeLeaf | Build your digital presence",
+    "description": "CodeLeaf builds your digital presence with a focus on user experience and performance."
   },
   "brand": {
     "name": "CodeLeaf",
@@ -9,7 +9,7 @@
     "secondary": "Leaf",
     "lowercasePrimary": "code",
     "lowercaseSecondary": "leaf",
-    "email": "hello@codeleaf.ca",
+    "email": "support@codeleaf.ca",
     "tagline": "Technology That Grows With You"
   },
   "navigation": {
