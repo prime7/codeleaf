@@ -116,6 +116,15 @@
         "metrics": { "accuracy": "95%", "docs": "10M+" },
         "color": "130",
         "href": "https://codeleaf.ca/case-studies/vertex"
+      },
+      {
+        "id": 4,
+        "name": "TaxApp",
+        "category": "Product",
+        "description": "Modern tax preparation portal with guided filing and secure document uploads.",
+        "metrics": { "status": "Live", "domain": "taxapp.codeleaf.ca" },
+        "color": "115",
+        "href": "https://taxapp.codeleaf.ca"
       }
     ]
   },
