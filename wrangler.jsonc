@@ -1,0 +1,8 @@
+{
+    "name": "codeleaf-home",
+    "compatibility_date": "2025-12-19",
+    "assets": {
+      "directory": "./out"
+    }
+  }
+  

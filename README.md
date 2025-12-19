@@ -29,8 +29,49 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on Cloudflare
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is configured to deploy to Cloudflare using OpenNext.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Prerequisites
+
+1. A Cloudflare account
+2. A domain configured in Cloudflare (currently set to `codeleaf.ca`)
+
+### Setup
+
+1. **Create API Token:**
+   - Go to [Cloudflare Dashboard](https://dash.cloudflare.com/)
+   - Navigate to My Profile > API Tokens
+   - Create a new token with "Edit Cloudflare Workers" permissions
+
+2. **Add Secrets to GitHub:**
+   - Go to your repository settings
+   - Navigate to Secrets and Variables > Actions
+   - Add these secrets:
+     - `CLOUDFLARE_API_TOKEN`: Your Cloudflare API token
+     - `CLOUDFLARE_ACCOUNT_ID`: Your Cloudflare account ID (found in dashboard)
+
+### Automatic Deployment
+
+The project will automatically deploy to Cloudflare when you push to the `main` or `master` branch.
+
+### Manual Deployment
+
+To deploy manually:
+
+```bash
+# Build and deploy
+pnpm deploy
+
+# Or build and preview locally
+pnpm preview
+```
+
+### Configuration
+
+- `wrangler.toml`: Cloudflare configuration
+- `open-next.config.ts`: OpenNext.js configuration
+- `.github/workflows/deploy.yml`: GitHub Actions deployment workflow
+
+For more information, see the [OpenNext.js documentation](https://opennext.js.org/).
