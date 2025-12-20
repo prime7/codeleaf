@@ -92,33 +92,6 @@
     "projects": [
       {
         "id": 1,
-        "name": "NEXUS",
-        "category": "Enterprise Platform",
-        "description": "Digital transformation for Fortune 500 logistics. Real-time tracking & predictive analytics.",
-        "metrics": { "users": "50K+", "uptime": "99.99%" },
-        "color": "145",
-        "href": "https://codeleaf.ca/case-studies/nexus"
-      },
-      {
-        "id": 2,
-        "name": "QUANTUM",
-        "category": "Fintech",
-        "description": "High-frequency trading platform. Sub-millisecond latency with bulletproof security.",
-        "metrics": { "tps": "1M+", "volume": "$8B" },
-        "color": "160",
-        "href": "https://codeleaf.ca/case-studies/quantum"
-      },
-      {
-        "id": 3,
-        "name": "VERTEX",
-        "category": "AI/ML Platform",
-        "description": "Automated document processing. 95% accuracy on complex legal documents.",
-        "metrics": { "accuracy": "95%", "docs": "10M+" },
-        "color": "130",
-        "href": "https://codeleaf.ca/case-studies/vertex"
-      },
-      {
-        "id": 4,
         "name": "TaxApp",
         "category": "Product",
         "description": "Modern tax preparation portal with guided filing and secure document uploads.",
