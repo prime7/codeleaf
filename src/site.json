@@ -47,7 +47,7 @@
         "icon": "Code2",
         "title": "Web Applications",
         "description": "Full-stack apps that scale. React, Next.js, Node.js.",
-        "tech": ["React", "Next.js", "TypeScript"]
+        "tech": ["React", "Next.js", "TypeScript", "Vercel", "Cloudflare"]
       },
       {
         "id": "api",
@@ -61,7 +61,7 @@
         "icon": "Cloud",
         "title": "Cloud Infrastructure",
         "description": "Scalable, resilient infrastructure that just works.",
-        "tech": ["AWS", "Docker", "Kubernetes"]
+        "tech": ["AWS", "Docker", "Kubernetes", "Terraform", "Cloudflare"]
       },
       {
         "id": "security",
@@ -75,7 +75,7 @@
         "icon": "Cpu",
         "title": "AI Integration",
         "description": "Intelligent features powered by cutting-edge ML.",
-        "tech": ["OpenAI", "LangChain", "Vector DB"]
+        "tech": ["OpenAI", "LangChain", "Vector DB", "AI SDK", "OpenRouter"]
       },
       {
         "id": "systems",
@@ -139,7 +139,7 @@
     }
   },
   "footer": {
-    "description": "Growing custom technical solutions that help businesses thrive. Based in Canada, cultivating ideas globally.",
+    "description": "Growing custom technical solutions that help businesses thrive. Based in Edmonton, Alberta, building applications for the whole of Canada.",
     "headings": {
       "navigation": "Navigate",
       "connect": "Connect"
