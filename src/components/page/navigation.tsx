@@ -5,13 +5,9 @@ import Link from "next/link"
 import { CodeLeafLogo } from "./codeleaf-logo"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import siteContent from "@/site.json"
 
-const navItems = [
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
-]
+const { navigation } = siteContent
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,7 +21,7 @@ export function Navigation() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          {navItems.map((item) => (
+          {navigation.links.map((item) => (
             <Link
               key={item.label}
               href={item.href}
@@ -50,7 +46,7 @@ export function Navigation() {
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border">
           <div className="px-6 py-4 flex flex-col gap-4">
-            {navItems.map((item) => (
+            {navigation.links.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}

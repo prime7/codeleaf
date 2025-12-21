@@ -18,6 +18,7 @@
     "links": [
       { "label": "Capabilities", "href": "#capabilities" },
       { "label": "Work", "href": "#projects" },
+      { "label": "Testimonials", "href": "#testimonials" },
       { "label": "About", "href": "#philosophy" },
       { "label": "Contact", "href": "#contact" }
     ]
@@ -25,15 +26,20 @@
   "hero": {
     "badge": "Available for new projects",
     "tagline": "Custom technical solutions that grow with your business",
-    "services": [],
+    "services": [
+      { "label": "Web Development", "icon": "Code" },
+      { "label": "AI Integration", "icon": "Database" },
+      { "label": "Cloud Solutions", "icon": "Cloud" },
+      { "label": "Mobile Apps", "icon": "Smartphone" }
+    ],
     "buttons": {
       "primary": { "label": "Start Your Project", "href": "#contact" },
       "secondary": { "label": "View Our Work", "href": "#projects" }
     },
     "stats": [
-      { "value": "50+", "label": "Projects" },
-      { "value": "98%", "label": "Satisfaction" },
-      { "value": "5+", "label": "Years" }
+      { "value": "100+", "label": "Projects" },
+      { "value": "99%", "label": "Satisfaction" },
+      { "value": "8+", "label": "Years" }
     ],
     "scrollLabel": "Scroll"
   },
@@ -47,42 +53,42 @@
         "icon": "Code2",
         "title": "Web Applications",
         "description": "Full-stack apps that scale. React, Next.js, Node.js.",
-        "tech": ["React", "Next.js", "TypeScript"]
+        "tech": ["React", "Next.js", "TypeScript", "Vercel", "Cloudflare", "Tailwind CSS", "Framer Motion"]
       },
       {
         "id": "api",
         "icon": "Database",
         "title": "API Architecture",
         "description": "RESTful and GraphQL APIs built for performance.",
-        "tech": ["REST", "GraphQL", "PostgreSQL"]
+        "tech": ["REST", "GraphQL", "PostgreSQL", "tRPC", "Prisma", "Supabase"]
       },
       {
         "id": "cloud",
         "icon": "Cloud",
         "title": "Cloud Infrastructure",
         "description": "Scalable, resilient infrastructure that just works.",
-        "tech": ["AWS", "Docker", "Kubernetes"]
+        "tech": ["AWS", "Docker", "Kubernetes", "Terraform", "Cloudflare", "Lambda", "ECS", "S3"]
       },
       {
         "id": "security",
         "icon": "Shield",
         "title": "Security First",
         "description": "Enterprise-grade security baked in from day one.",
-        "tech": ["OAuth", "Encryption", "Auditing"]
+        "tech": ["OAuth", "Encryption", "Auditing", "JWT", "bcrypt", "SSL/TLS"]
       },
       {
         "id": "ai",
         "icon": "Cpu",
         "title": "AI Integration",
         "description": "Intelligent features powered by cutting-edge ML.",
-        "tech": ["OpenAI", "LangChain", "Vector DB"]
+        "tech": ["OpenAI", "LangChain", "Vector DB", "AI SDK", "OpenRouter", "GPT-4", "Claude", "Pinecone"]
       },
       {
         "id": "systems",
         "icon": "Layers",
         "title": "System Design",
         "description": "Complex systems made simple. Any scale.",
-        "tech": ["Microservices", "Event Sourcing", "DDD"]
+        "tech": ["Microservices", "Event Sourcing", "DDD", "CQRS", "Kafka", "RabbitMQ"]
       }
     ]
   },
@@ -101,12 +107,43 @@
       }
     ]
   },
+  "testimonials": {
+    "title": "What our",
+    "highlight": "clients say",
+    "description": "Trusted by businesses across Canada for reliable, innovative solutions.",
+    "items": [
+      {
+        "id": 1,
+        "quote": "CodeLeaf transformed our outdated system into a modern, scalable platform. Their expertise in AI integration gave us a competitive edge.",
+        "author": "Sarah Johnson",
+        "role": "CTO",
+        "company": "TechCorp Canada",
+        "avatar": "/placeholder-avatar-1.jpg"
+      },
+      {
+        "id": 2,
+        "quote": "Outstanding work on our e-commerce platform. The team delivered on time and exceeded our expectations with their cloud infrastructure setup.",
+        "author": "Michael Chen",
+        "role": "Founder",
+        "company": "RetailPlus",
+        "avatar": "/placeholder-avatar-2.jpg"
+      },
+      {
+        "id": 3,
+        "quote": "CodeLeaf's attention to security and performance is unmatched. They've been instrumental in our digital transformation journey.",
+        "author": "Emma Davis",
+        "role": "Director of IT",
+        "company": "FinanceFlow Inc.",
+        "avatar": "/placeholder-avatar-3.jpg"
+      }
+    ]
+  },
   "philosophy": {
     "title": "We don't just write code.",
     "highlight": "We grow solutions.",
-    "description": "Like a leaf, every project needs the right environment to thrive. We provide the expertise, care, and technical foundation for your ideas to flourish.",
+    "description": "Based in Edmonton, Alberta, CodeLeaf serves clients across Canada with cutting-edge technology solutions. Like a leaf, every project needs the right environment to thrive. We provide the expertise, care, and technical foundation for your ideas to flourish using the latest in web development, AI integration, and cloud infrastructure.",
     "stats": [
-      { "value": "50+", "label": "Projects" },
+      { "value": "100+", "label": "Projects" },
       { "value": "99%", "label": "Retention" },
       { "value": "8+", "label": "Years" }
     ]
@@ -139,7 +176,7 @@
     }
   },
   "footer": {
-    "description": "Growing custom technical solutions that help businesses thrive. Based in Canada, cultivating ideas globally.",
+    "description": "Growing custom technical solutions that help businesses thrive. Based in Edmonton, Alberta, building applications for the whole of Canada.",
     "headings": {
       "navigation": "Navigate",
       "connect": "Connect"
@@ -147,6 +184,7 @@
     "navigation": [
       { "label": "Capabilities", "href": "#capabilities" },
       { "label": "Work", "href": "#projects" },
+      { "label": "Testimonials", "href": "#testimonials" },
       { "label": "About", "href": "#philosophy" },
       { "label": "Contact", "href": "#contact" }
     ],
