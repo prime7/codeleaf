@@ -2,6 +2,7 @@ import { TerminalNav } from "@/components/page/terminal-nav"
 import { ImmersiveHero } from "@/components/page/immersive-hero"
 import { CapabilitiesGrid } from "@/components/page/capabilities-grid"
 import { ProjectsShowcase } from "@/components/page/projects-showcase"
+import { TestimonialsSection } from "@/components/page/testimonials-section"
 import { PhilosophySection } from "@/components/page/philosophy-section"
 import { TerminalContact } from "@/components/page/terminal-contact"
 import { MatrixFooter } from "@/components/page/matrix-footer"
@@ -14,6 +15,7 @@ export default function HomePage() {
       <ImmersiveHero />
       <CapabilitiesGrid />
       <ProjectsShowcase />
+      <TestimonialsSection />
       <PhilosophySection />
       <TerminalContact />
       <MatrixFooter />
