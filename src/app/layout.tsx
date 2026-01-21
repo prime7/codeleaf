@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google"
-import siteContent from "@/site.json"
+import siteContent from "../site.json"
 import "./globals.css"
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })

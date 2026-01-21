@@ -5,7 +5,7 @@ import Link from "next/link"
 import { CodeLeafLogo } from "./codeleaf-logo"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-import siteContent from "@/site.json"
+import siteContent from "../../site.json"
 
 const { navigation } = siteContent
 
