@@ -39,7 +39,18 @@ export function TerminalNav() {
             </span>
           </Link>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6">
+              {navigation.links.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-medium text-zinc-400 hover:text-primary transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
             <Button
               asChild
               variant="outline"
