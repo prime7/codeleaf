@@ -104,6 +104,24 @@
         "metrics": { "status": "Live", "domain": "taxapp.codeleaf.ca" },
         "color": "115",
         "href": "https://taxapp.codeleaf.ca"
+      },
+      {
+        "id": 2,
+        "name": "brokerbot.ai",
+        "category": "Product",
+        "description": "Brokerage management platform with AI workflows, CRM integrations, and AI-powered customer service voice support for agents.",
+        "metrics": { "role": "Founding Engineer", "since": "Feb 2025" },
+        "color": "210",
+        "href": "https://brokerbot.ai"
+      },
+      {
+        "id": 3,
+        "name": "Chroma Care Labs",
+        "category": "Product",
+        "description": "Built from scratch with AWS, FastAPI, and React mobile experiences, including image-processing APIs and autoscaling ECS infrastructure.",
+        "metrics": { "stack": "AWS + FastAPI", "infra": "Terraform + ECS" },
+        "color": "160",
+        "href": "https://chromacarelabs.com"
       }
     ]
   },
