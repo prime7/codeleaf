@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { TerminalNav } from "@/components/page/terminal-nav"
 import { MatrixFooter } from "@/components/page/matrix-footer"
 import { InsightsList } from "@/components/page/insights-list"
+import { getAllPosts } from "@/lib/blog"
 
 export const metadata: Metadata = {
   title: "AI Automation Insights for Alberta Businesses | CodeLeaf",
@@ -22,11 +23,20 @@ export const metadata: Metadata = {
 }
 
 export default function InsightsPage() {
+  const posts = getAllPosts().map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    category: post.category,
+    date: post.date,
+    readingTime: post.readingTime,
+  }))
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-background noise">
       <div className="grid-pattern fixed inset-0 pointer-events-none" />
       <TerminalNav />
-      <InsightsList />
+      <InsightsList posts={posts} />
       <MatrixFooter />
     </main>
   )

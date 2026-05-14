@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google"
 import siteContent from "@/site.json"
+import { Analytics } from "@/components/analytics"
 import "./globals.css"
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     description: siteContent.meta.description,
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "CodeLeaf - AI Automation Agency for Alberta Businesses",
@@ -140,6 +141,7 @@ export default function RootLayout({
       </head>
       <body className={`${spaceGrotesk.className} ${jetbrainsMono.variable} font-sans antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   )

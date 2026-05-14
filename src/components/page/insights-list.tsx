@@ -4,13 +4,24 @@ import { useEffect, useRef, useState } from "react"
 import { ArrowRight, BookOpen } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import siteContent from "@/site.json"
 import Link from "next/link"
+import { getAllPosts } from "@/lib/blog"
 
-export function InsightsList() {
+// This component receives posts from the server component
+interface InsightsListProps {
+  posts: {
+    slug: string
+    title: string
+    excerpt: string
+    category: string
+    date: string
+    readingTime: string
+  }[]
+}
+
+export function InsightsList({ posts }: InsightsListProps) {
   const sectionRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
-  const { insights } = siteContent
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,14 +42,14 @@ export function InsightsList() {
             Latest <span className="text-primary">Insights</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Practical guidance on AI implementation, technology choices, and real-world results.
+            Practical guidance on AI automation, lead generation, and real-world results for Alberta businesses.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {insights.articles.map((article, index) => (
+          {posts.map((post, index) => (
             <Card
-              key={article.slug}
+              key={post.slug}
               className="group p-8 bg-card/50 border-border/50 hover:border-primary/30 transition-all duration-300 flex flex-col"
               style={{
                 opacity: isVisible ? 1 : 0,
@@ -46,21 +57,22 @@ export function InsightsList() {
                 transition: `all 0.6s ease-out ${index * 0.15}s`,
               }}
             >
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-4 flex-wrap">
                 <Badge variant="outline" className="border-primary/20 text-primary text-xs">
-                  {article.category}
+                  {post.category}
                 </Badge>
-                <span className="text-xs text-muted-foreground">{article.date}</span>
+                <span className="text-xs text-muted-foreground">{post.date}</span>
+                <span className="text-xs text-muted-foreground">{post.readingTime}</span>
               </div>
 
               <h2 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                {article.title}
+                {post.title}
               </h2>
 
-              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">{article.excerpt}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">{post.excerpt}</p>
 
               <Link
-                href={`/insights/${article.slug}/`}
+                href={`/insights/${post.slug}/`}
                 className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-medium"
               >
                 Read article

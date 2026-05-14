@@ -43,4 +43,13 @@ next-env.d.ts
 
 # opennextjs
 .opennextjs
-.open-next
+.open-next.env.local
+.env.production
+
+# OpenNext
+.opennext
+
+
+# OpenNext build output
+.open-next/
+

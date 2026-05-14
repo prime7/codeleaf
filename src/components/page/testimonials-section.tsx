@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import siteContent from "@/site.json"
-import Image from "next/image"
+import { AvatarPlaceholder } from "@/components/avatar-placeholder"
 
 export function TestimonialsSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -56,11 +56,7 @@ export function TestimonialsSection() {
               </blockquote>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <span className="text-primary font-semibold text-lg">
-                    {testimonial.author.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
+                <AvatarPlaceholder name={testimonial.author} size={48} className="rounded-full" />
                 <div>
                   <div className="font-semibold text-foreground">{testimonial.author}</div>
                   <div className="text-sm text-muted-foreground">

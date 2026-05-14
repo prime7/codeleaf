@@ -1,13 +1,23 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { ArrowRight, BookOpen } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import siteContent from "@/site.json"
 import Link from "next/link"
+import siteContent from "@/site.json"
 
-export function InsightsSection() {
+interface InsightsSectionProps {
+  posts: {
+    slug: string
+    title: string
+    excerpt: string
+    category: string
+    date: string
+  }[]
+}
+
+export function InsightsSection({ posts }: InsightsSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null)
   const [isVisible, setIsVisible] = useState(false)
   const { insights } = siteContent
@@ -22,6 +32,8 @@ export function InsightsSection() {
     if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
+
+  const displayPosts = posts.slice(0, 3)
 
   return (
     <section id="insights" ref={sectionRef} className="relative py-32 px-6 bg-secondary/10">
@@ -43,9 +55,9 @@ export function InsightsSection() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {insights.articles.map((article, index) => (
+          {displayPosts.map((post, index) => (
             <Card
-              key={article.slug}
+              key={post.slug}
               className="group p-8 bg-card/50 border-border/50 hover:border-primary/30 transition-all duration-300 flex flex-col"
               style={{
                 opacity: isVisible ? 1 : 0,
@@ -55,19 +67,19 @@ export function InsightsSection() {
             >
               <div className="flex items-center gap-3 mb-4">
                 <Badge variant="outline" className="border-primary/20 text-primary text-xs">
-                  {article.category}
+                  {post.category}
                 </Badge>
-                <span className="text-xs text-muted-foreground">{article.date}</span>
+                <span className="text-xs text-muted-foreground">{post.date}</span>
               </div>
 
               <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                {article.title}
+                {post.title}
               </h3>
 
-              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">{article.excerpt}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-1">{post.excerpt}</p>
 
               <Link
-                href={`/insights/${article.slug}/`}
+                href={`/insights/${post.slug}/`}
                 className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-medium"
               >
                 Read article

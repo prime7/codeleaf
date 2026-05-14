@@ -12,8 +12,17 @@ import { InsightsSection } from "@/components/page/insights-section"
 import { PhilosophySection } from "@/components/page/philosophy-section"
 import { TerminalContact } from "@/components/page/terminal-contact"
 import { MatrixFooter } from "@/components/page/matrix-footer"
+import { getAllPosts } from "@/lib/blog"
 
 export default function HomePage() {
+  const posts = getAllPosts().map((post) => ({
+    slug: post.slug,
+    title: post.title,
+    excerpt: post.excerpt,
+    category: post.category,
+    date: post.date,
+  }))
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-background noise">
       <div className="grid-pattern fixed inset-0 pointer-events-none" />
@@ -27,7 +36,7 @@ export default function HomePage() {
       <TestimonialsSection />
       <TrustSignalsSection />
       <PricingSection />
-      <InsightsSection />
+      <InsightsSection posts={posts} />
       <PhilosophySection />
       <TerminalContact />
       <MatrixFooter />
