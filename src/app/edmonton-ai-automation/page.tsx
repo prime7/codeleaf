@@ -55,20 +55,6 @@ export default function EdmontonPage() {
           { label: "Lead Increase", value: "50%" },
           { label: "Local Clients", value: "20+" },
         ]}
-        testimonials={[
-          {
-            quote: "As an Edmonton-based electrician, I was losing leads after 5pm. CodeLeaf's AI chatbot now qualifies inquiries and books estimates 24/7. My bookings increased by 60%.",
-            author: "James Okonkwo",
-            role: "Owner",
-            company: "Capital City Electrical",
-          },
-          {
-            quote: "We needed PIPEDA-compliant patient communication for our Edmonton clinic. CodeLeaf delivered an AI system that handles appointment reminders and after-hours intake securely.",
-            author: "Dr. Rebecca Torres",
-            role: "Lab Director",
-            company: "Chroma Care Labs — Edmonton",
-          },
-        ]}
       />
       <MatrixFooter />
     </main>

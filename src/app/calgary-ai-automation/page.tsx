@@ -55,20 +55,6 @@ export default function CalgaryPage() {
           { label: "Lead Increase", value: "45%" },
           { label: "Calgary Clients", value: "15+" },
         ]}
-        testimonials={[
-          {
-            quote: "CodeLeaf built an AI chatbot that handles after-hours inquiries for our HVAC company. We're capturing 3x more leads in Calgary without hiring overnight staff.",
-            author: "Mike Richardson",
-            role: "Operations Manager",
-            company: "Calgary HVAC Solutions",
-          },
-          {
-            quote: "The voice agent they implemented answers our missed calls and books appointments automatically. Our Calgary clinic's no-show rate dropped by 40%.",
-            author: "Dr. Sarah Chen",
-            role: "Clinic Director",
-            company: "South Calgary Medical",
-          },
-        ]}
       />
       <MatrixFooter />
     </main>

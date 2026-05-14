@@ -5,7 +5,6 @@ import { IndustriesSection } from "@/components/page/industries-section"
 import { AIServicesSection } from "@/components/page/ai-services-section"
 import { CapabilitiesGrid } from "@/components/page/capabilities-grid"
 import { ProjectsShowcase } from "@/components/page/projects-showcase"
-import { TestimonialsSection } from "@/components/page/testimonials-section"
 import { TrustSignalsSection } from "@/components/page/trust-signals-section"
 import { PricingSection } from "@/components/page/pricing-section"
 import { InsightsSection } from "@/components/page/insights-section"
@@ -33,7 +32,6 @@ export default function HomePage() {
       <AIServicesSection />
       <CapabilitiesGrid />
       <ProjectsShowcase />
-      <TestimonialsSection />
       <TrustSignalsSection />
       <PricingSection />
       <InsightsSection posts={posts} />

@@ -15,7 +15,6 @@ interface CityPageTemplateProps {
   description: string
   industries: string[]
   localStats: { label: string; value: string }[]
-  testimonials: { quote: string; author: string; role: string; company: string }[]
 }
 
 export function CityPageTemplate({
@@ -25,7 +24,6 @@ export function CityPageTemplate({
   description,
   industries,
   localStats,
-  testimonials,
 }: CityPageTemplateProps) {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -123,37 +121,6 @@ export function CityPageTemplate({
             ))}
           </div>
         </div>
-
-        {/* Testimonials */}
-        {testimonials.length > 0 && (
-          <div className="mb-24">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                What <span className="text-primary">{city} Businesses</span> Say
-              </h2>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6">
-              {testimonials.map((t, i) => (
-                <Card
-                  key={i}
-                  className="p-8 bg-card/30 border-primary/10"
-                  style={{
-                    opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? "translateY(0)" : "translateY(20px)",
-                    transition: `all 0.6s ease-out ${0.3 + i * 0.1}s`,
-                  }}
-                >
-                  <p className="text-muted-foreground mb-6 italic">&ldquo;{t.quote}&rdquo;</p>
-                  <div>
-                    <div className="font-semibold text-foreground">{t.author}</div>
-                    <div className="text-sm text-muted-foreground">{t.role}</div>
-                    <div className="text-sm text-primary">{t.company}</div>
-                  </div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        )}
 
         {/* CTA */}
         <div className="text-center bg-primary/5 border border-primary/20 p-12">

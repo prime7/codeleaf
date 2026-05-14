@@ -50,13 +50,13 @@ export const metadata: Metadata = {
       },
     ],
   },
-  twitter: {
+   twitter: {
     card: "summary_large_image",
     title: siteContent.meta.title,
     description: siteContent.meta.description,
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
-  robots: {
+   robots: {
     index: true,
     follow: true,
     googleBot: {
@@ -66,9 +66,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  verification: {
-    google: "your-google-verification-code",
   },
   other: {
     "geo.region": "CA-AB",

@@ -244,40 +244,6 @@
       }
     ]
   },
-  "testimonials": {
-    "title": "What Alberta",
-    "highlight": "businesses say",
-    "description": "Trusted by Edmonton, Calgary, and Alberta-wide businesses for reliable AI automation that actually delivers leads and saves time.",
-    "items": [
-      {
-        "id": 1,
-        "quote": "The OCR and anomaly detection CodeLeaf built into TaxApp eliminated data entry errors and cut our processing time per return from 45 minutes to under 10. That's a game-changer during tax season.",
-        "author": "Aisha Patel",
-        "role": "Product Director",
-        "company": "TaxApp — Edmonton, AB",
-        "metric": "78% faster processing",
-        "avatar": "/placeholder-avatar-2.jpg"
-      },
-      {
-        "id": 2,
-        "quote": "Their AI report generation reduced our transcription workload by 60% and caught critical values we previously missed. CodeLeaf understood healthcare compliance from day one.",
-        "author": "Dr. Rebecca Torres",
-        "role": "Lab Director",
-        "company": "Chroma Care Labs — Calgary, AB",
-        "metric": "60% less transcription",
-        "avatar": "/placeholder-avatar-3.jpg"
-      },
-      {
-        "id": 3,
-        "quote": "CodeLeaf turned our legacy inventory system into a real-time AI-powered platform. Demand forecasting accuracy improved by 35% and stockouts dropped by half.",
-        "author": "Marcus Chen",
-        "role": "CTO",
-        "company": "RetailFlow — Alberta",
-        "metric": "35% better forecasting",
-        "avatar": "/placeholder-avatar-4.jpg"
-      }
-    ]
-  },
   "trustSignals": {
     "title": "Why Alberta Businesses Choose",
     "highlight": "CodeLeaf",
