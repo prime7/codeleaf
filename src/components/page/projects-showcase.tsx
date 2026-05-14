@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Card } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import siteContent from "@/site.json"
 
 export function ProjectsShowcase() {
@@ -65,13 +66,34 @@ export function ProjectsShowcase() {
                     </div>
 
                     <div className="flex-1">
-                      <div className="flex items-center gap-4 mb-3">
+                      <div className="flex flex-wrap items-center gap-3 mb-3">
                         <h3 className="text-2xl md:text-3xl font-bold text-foreground">{project.name}</h3>
                         <span className="font-mono text-xs text-muted-foreground px-2 py-1 bg-secondary/50">
                           {project.category}
                         </span>
+                        <Badge variant="outline" className="border-primary/20 text-primary text-xs">
+                          {project.industry}
+                        </Badge>
                       </div>
-                      <p className="text-muted-foreground max-w-xl mb-4">{project.description}</p>
+                      <p className="text-muted-foreground max-w-xl mb-3">{project.description}</p>
+
+                      {/* AI Outcome */}
+                      <p className="text-sm text-foreground/80 max-w-2xl mb-4 leading-relaxed">
+                        {project.aiOutcome}
+                      </p>
+
+                      {/* AI Features */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.aiFeatures.map((feature) => (
+                          <span
+                            key={feature}
+                            className="font-mono text-xs px-2 py-1 bg-primary/10 text-primary"
+                          >
+                            {feature}
+                          </span>
+                        ))}
+                      </div>
+
                       <div className="flex items-center gap-3 text-primary text-sm font-medium">
                         <span>View project</span>
                         <ArrowRight

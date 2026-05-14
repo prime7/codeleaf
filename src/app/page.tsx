@@ -1,8 +1,11 @@
 import { TerminalNav } from "@/components/page/terminal-nav"
 import { ImmersiveHero } from "@/components/page/immersive-hero"
+import { AIServicesSection } from "@/components/page/ai-services-section"
 import { CapabilitiesGrid } from "@/components/page/capabilities-grid"
 import { ProjectsShowcase } from "@/components/page/projects-showcase"
 import { TestimonialsSection } from "@/components/page/testimonials-section"
+import { TrustSignalsSection } from "@/components/page/trust-signals-section"
+import { InsightsSection } from "@/components/page/insights-section"
 import { PhilosophySection } from "@/components/page/philosophy-section"
 import { TerminalContact } from "@/components/page/terminal-contact"
 import { MatrixFooter } from "@/components/page/matrix-footer"
@@ -13,9 +16,12 @@ export default function HomePage() {
       <div className="grid-pattern fixed inset-0 pointer-events-none" />
       <TerminalNav />
       <ImmersiveHero />
+      <AIServicesSection />
       <CapabilitiesGrid />
       <ProjectsShowcase />
       <TestimonialsSection />
+      <TrustSignalsSection />
+      <InsightsSection />
       <PhilosophySection />
       <TerminalContact />
       <MatrixFooter />

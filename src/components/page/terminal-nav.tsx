@@ -39,7 +39,23 @@ export function TerminalNav() {
             </span>
           </Link>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
+            {/* Page links - desktop only */}
+            <div className="hidden md:flex items-center gap-4 mr-2">
+              <Link
+                href="/ai-services/"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                AI Services
+              </Link>
+              <Link
+                href="/insights/"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Insights
+              </Link>
+            </div>
+
             <Button
               asChild
               variant="outline"

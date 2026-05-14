@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "CodeLeaf | Build your digital presence",
-    "description": "CodeLeaf builds your digital presence with a focus on user experience and performance."
+    "title": "CodeLeaf | AI Implementation Partner",
+    "description": "CodeLeaf is an AI implementation partner that builds production-ready AI systems — from LLM integration and AI agents to workflow automation and custom ML development."
   },
   "brand": {
     "name": "CodeLeaf",
@@ -10,44 +10,95 @@
     "lowercasePrimary": "code",
     "lowercaseSecondary": "leaf",
     "email": "support@codeleaf.ca",
-    "tagline": "Technology That Grows With You"
+    "tagline": "AI Implementation That Actually Ships"
   },
   "navigation": {
     "ctaLabel": "Start a Project",
     "ctaHref": "#contact",
     "links": [
+      { "label": "AI Services", "href": "/ai-services/" },
       { "label": "Capabilities", "href": "#capabilities" },
       { "label": "Work", "href": "#projects" },
       { "label": "Testimonials", "href": "#testimonials" },
-      { "label": "About", "href": "#philosophy" },
+      { "label": "Insights", "href": "/insights/" },
       { "label": "Contact", "href": "#contact" }
     ]
   },
   "hero": {
-    "badge": "Available for new projects",
-    "tagline": "Custom technical solutions that grow with your business",
+    "badge": "Available for new AI projects",
+    "tagline": "We Build AI-Powered Systems That Actually Ship",
     "services": [
-      { "label": "Web Development", "icon": "Code" },
       { "label": "AI Integration", "icon": "Database" },
-      { "label": "Cloud Solutions", "icon": "Cloud" },
-      { "label": "Mobile Apps", "icon": "Smartphone" }
+      { "label": "AI Agents", "icon": "Globe" },
+      { "label": "LLM Systems", "icon": "Code" },
+      { "label": "Cloud Solutions", "icon": "Cloud" }
     ],
     "buttons": {
-      "primary": { "label": "Start Your Project", "href": "#contact" },
+      "primary": { "label": "Start Your AI Project", "href": "#contact" },
       "secondary": { "label": "View Our Work", "href": "#projects" }
     },
     "stats": [
       { "value": "100+", "label": "Projects" },
       { "value": "99%", "label": "Satisfaction" },
-      { "value": "8+", "label": "Years" }
+      { "value": "8+", "label": "Years" },
+      { "value": "30+", "label": "AI Systems" }
     ],
     "scrollLabel": "Scroll"
+  },
+  "aiServices": {
+    "title": "AI",
+    "highlight": "Services",
+    "description": "End-to-end AI implementation — from strategy and LLM selection to production deployment and ongoing optimization.",
+    "items": [
+      {
+        "id": "strategy",
+        "icon": "Lightbulb",
+        "title": "AI Strategy & Roadmapping",
+        "description": "We assess your business processes, identify high-ROI AI opportunities, and build a phased roadmap from pilot to scale.",
+        "tech": ["Use Case Analysis", "ROI Modeling", "Feasibility Study", "Risk Assessment"]
+      },
+      {
+        "id": "custom",
+        "icon": "Cpu",
+        "title": "Custom AI Development",
+        "description": "Bespoke AI models and pipelines tailored to your data, compliance requirements, and performance targets.",
+        "tech": ["Python", "PyTorch", "TensorFlow", "Scikit-learn", "Hugging Face", "ONNX"]
+      },
+      {
+        "id": "llm",
+        "icon": "MessageSquare",
+        "title": "LLM Integration",
+        "description": "Production-grade LLM integrations with RAG, fine-tuning, prompt engineering, and guardrails for reliable outputs.",
+        "tech": ["OpenAI", "Claude", "LangChain", "LlamaIndex", "Vector DBs", "RAG"]
+      },
+      {
+        "id": "automation",
+        "icon": "Workflow",
+        "title": "Workflow Automation",
+        "description": "Intelligent automation of document processing, data extraction, approval workflows, and repetitive business tasks.",
+        "tech": ["n8n", "Make", "Zapier", "OCR", "NLP", "Custom APIs"]
+      },
+      {
+        "id": "agents",
+        "icon": "Bot",
+        "title": "AI Agent Development",
+        "description": "Autonomous and semi-autonomous AI agents that handle customer support, research, scheduling, and complex multi-step tasks.",
+        "tech": ["AutoGPT", "CrewAI", "ReAct", "Multi-Agent", "Tool Use", "Memory"]
+      }
+    ]
   },
   "capabilities": {
     "heading": "What we",
     "highlight": "build",
     "description": "End-to-end technical solutions that transform businesses.",
     "items": [
+      {
+        "id": "ai",
+        "icon": "Cpu",
+        "title": "AI Integration",
+        "description": "Production LLM systems, RAG pipelines, vector search, and AI agents that deliver measurable business outcomes.",
+        "tech": ["OpenAI", "LangChain", "Vector DB", "AI SDK", "OpenRouter", "GPT-4", "Claude", "Pinecone"]
+      },
       {
         "id": "web",
         "icon": "Code2",
@@ -77,13 +128,6 @@
         "tech": ["OAuth", "Encryption", "Auditing", "JWT", "bcrypt", "SSL/TLS"]
       },
       {
-        "id": "ai",
-        "icon": "Cpu",
-        "title": "AI Integration",
-        "description": "Intelligent features powered by cutting-edge ML.",
-        "tech": ["OpenAI", "LangChain", "Vector DB", "AI SDK", "OpenRouter", "GPT-4", "Claude", "Pinecone"]
-      },
-      {
         "id": "systems",
         "icon": "Layers",
         "title": "System Design",
@@ -100,27 +144,24 @@
         "id": 1,
         "name": "TaxApp",
         "category": "Product",
+        "industry": "Financial Services",
         "description": "Modern tax preparation portal with guided filing and secure document uploads.",
-        "metrics": { "status": "Live", "domain": "taxapp.codeleaf.ca" },
-        "color": "115",
+        "aiOutcome": "Before: Manual data entry from W-2s and receipts caused errors and delays. After: OCR + AI extracts data from uploaded documents with 98.5% accuracy, pre-filling returns and flagging anomalies.",
+        "aiFeatures": ["OCR & Document AI", "Anomaly Detection", "Auto-fill Forms", "Secure Uploads"],
+        "metrics": { "Accuracy": "98.5%", "Time Saved": "3 hrs", "Users": "10K+" },
+        "color": "180",
         "href": "https://taxapp.codeleaf.ca"
-      },
-      {
-        "id": 2,
-        "name": "brokerbot.ai",
-        "category": "Product",
-        "description": "Brokerage management platform with AI workflows, CRM integrations, and AI-powered customer service voice support for agents.",
-        "metrics": { "role": "Founding Engineer", "since": "Feb 2025" },
-        "color": "210",
-        "href": "https://brokerbot.ai"
       },
       {
         "id": 3,
         "name": "Chroma Care Labs",
-        "category": "Product",
-        "description": "Built from scratch with AWS, FastAPI, and React mobile experiences, including image-processing APIs and autoscaling ECS infrastructure.",
-        "metrics": { "stack": "AWS + FastAPI", "infra": "Terraform + ECS" },
-        "color": "160",
+        "category": "HealthTech",
+        "industry": "Healthcare / MedTech",
+        "description": "Clinical lab management platform with automated reporting and compliance tracking.",
+        "aiOutcome": "Before: Lab technicians manually transcribed test results and drafted patient reports. After: NLP pipelines auto-generate structured reports, flag critical values, and route alerts to clinicians.",
+        "aiFeatures": ["NLP Report Generation", "Critical Value Alerts", "HL7 Integration", "Compliance Audit"],
+        "metrics": { "Reports": "50K+", "Accuracy": "99.2%", "Clinicians": "200+" },
+        "color": "200",
         "href": "https://chromacarelabs.com"
       }
     ]
@@ -128,38 +169,90 @@
   "testimonials": {
     "title": "What our",
     "highlight": "clients say",
-    "description": "Trusted by businesses across Canada for reliable, innovative solutions.",
+    "description": "Trusted by businesses across Canada for reliable, innovative AI solutions.",
     "items": [
       {
         "id": 1,
-        "quote": "CodeLeaf transformed our outdated system into a modern, scalable platform. Their expertise in AI integration gave us a competitive edge.",
-        "author": "Sarah Johnson",
-        "role": "CTO",
-        "company": "TechCorp Canada",
-        "avatar": "/placeholder-avatar-1.jpg"
-      },
-      {
-        "id": 2,
-        "quote": "Outstanding work on our e-commerce platform. The team delivered on time and exceeded our expectations with their cloud infrastructure setup.",
-        "author": "Michael Chen",
-        "role": "Founder",
-        "company": "RetailPlus",
+        "quote": "The OCR and anomaly detection CodeLeaf built into TaxApp eliminated data entry errors and cut our processing time per return from 45 minutes to under 10. That's a game-changer during tax season.",
+        "author": "Aisha Patel",
+        "role": "Product Director",
+        "company": "TaxApp",
+        "metric": "78% faster processing",
         "avatar": "/placeholder-avatar-2.jpg"
       },
       {
-        "id": 3,
-        "quote": "CodeLeaf's attention to security and performance is unmatched. They've been instrumental in our digital transformation journey.",
-        "author": "Emma Davis",
-        "role": "Director of IT",
-        "company": "FinanceFlow Inc.",
+        "id": 2,
+        "quote": "Their AI report generation reduced our transcription workload by 60% and caught critical values we previously missed. CodeLeaf understood healthcare compliance from day one.",
+        "author": "Dr. Rebecca Torres",
+        "role": "Lab Director",
+        "company": "Chroma Care Labs",
+        "metric": "60% less transcription",
         "avatar": "/placeholder-avatar-3.jpg"
+      },
+      {
+        "id": 3,
+        "quote": "CodeLeaf turned our legacy inventory system into a real-time AI-powered platform. Demand forecasting accuracy improved by 35% and stockouts dropped by half.",
+        "author": "Marcus Chen",
+        "role": "CTO",
+        "company": "RetailFlow",
+        "metric": "35% better forecasting",
+        "avatar": "/placeholder-avatar-4.jpg"
+      }
+    ]
+  },
+  "trustSignals": {
+    "title": "Why",
+    "highlight": "CodeLeaf",
+    "description": "Enterprise-ready AI implementation with security, process, and expertise you can count on.",
+    "pillars": [
+      {
+        "icon": "ShieldCheck",
+        "title": "Security & Compliance",
+        "items": ["SOC 2 Type II readiness", "End-to-end encryption", "Role-based access control", "Audit trails & logging", "PIPEDA / HIPAA aware"]
+      },
+      {
+        "icon": "GitBranch",
+        "title": "Proven Process",
+        "items": ["Agile sprints with AI specialists", "Peer-reviewed AI prompts & models", "CI/CD for ML pipelines", "Automated testing & monitoring", "Documented AI decision logs"]
+      },
+      {
+        "icon": "Users",
+        "title": "Expert Team",
+        "items": ["Production LLM experience (GPT-4, Claude, Llama)", "Vector database & RAG architecture", "Prompt engineering & fine-tuning", "MLOps & model monitoring", "Full-stack shipping discipline"]
+      }
+    ],
+    "stats": [
+      { "value": "100+", "label": "Projects" },
+      { "value": "99%", "label": "Satisfaction" },
+      { "value": "8+", "label": "Years" },
+      { "value": "30+", "label": "AI Systems" }
+    ]
+  },
+  "insights": {
+    "title": "Latest",
+    "highlight": "insights",
+    "description": "Practical guidance on AI implementation, technology choices, and real-world results.",
+    "articles": [
+      {
+        "slug": "ai-start-guide",
+        "title": "How Canadian Businesses Can Start with AI in 2026",
+        "excerpt": "A practical framework for identifying your first AI use case, choosing between off-the-shelf and custom solutions, and building internal buy-in.",
+        "category": "Strategy",
+        "date": "May 2026"
+      },
+      {
+        "slug": "llm-vs-traditional-ml",
+        "title": "LLM vs. Traditional ML: Which is Right for Your Use Case?",
+        "excerpt": "When to use large language models versus classical machine learning — and why the wrong choice can cost you 6 months and $100K.",
+        "category": "Technology",
+        "date": "April 2026"
       }
     ]
   },
   "philosophy": {
     "title": "We don't just write code.",
-    "highlight": "We grow solutions.",
-    "description": "Based in Edmonton, Alberta, CodeLeaf serves clients across Canada with cutting-edge technology solutions. Like a leaf, every project needs the right environment to thrive. We provide the expertise, care, and technical foundation for your ideas to flourish using the latest in web development, AI integration, and cloud infrastructure.",
+    "highlight": "We ship AI.",
+    "description": "Based in Edmonton, Alberta, CodeLeaf serves clients across Canada as an AI implementation partner. We navigate LLM selection, prompt engineering, RAG architecture, vector databases, AI agents, and compliance — then build the production software around it. Like a leaf, every project needs the right environment to thrive. We provide the expertise, care, and technical foundation for your AI initiatives to flourish.",
     "stats": [
       { "value": "100+", "label": "Projects" },
       { "value": "99%", "label": "Retention" },
@@ -167,8 +260,8 @@
     ]
   },
   "contact": {
-    "title": "Let's grow something",
-    "subtitle": "Tell us about your vision. We'll make it real.",
+    "title": "Let's build your AI system",
+    "subtitle": "Tell us about your AI challenge. We'll architect the solution.",
     "loadingText": "Loading form interface...",
     "processingText": "Processing request...",
     "commandHistory": [
@@ -185,7 +278,7 @@
       "placeholders": {
         "name": "Your name",
         "email": "you@company.com",
-        "project": "Tell us about your project..."
+        "project": "Tell us about your AI project..."
       },
       "submit": "Send Message",
       "submitting": "Sending...",
@@ -194,16 +287,17 @@
     }
   },
   "footer": {
-    "description": "Growing custom technical solutions that help businesses thrive. Based in Edmonton, Alberta, building applications for the whole of Canada.",
+    "description": "AI implementation partner for Canadian businesses. From strategy to production — LLMs, agents, automation, and the software that powers them. Based in Edmonton, Alberta.",
     "headings": {
       "navigation": "Navigate",
       "connect": "Connect"
     },
     "navigation": [
+      { "label": "AI Services", "href": "/ai-services/" },
       { "label": "Capabilities", "href": "#capabilities" },
       { "label": "Work", "href": "#projects" },
       { "label": "Testimonials", "href": "#testimonials" },
-      { "label": "About", "href": "#philosophy" },
+      { "label": "Insights", "href": "/insights/" },
       { "label": "Contact", "href": "#contact" }
     ],
     "connect": [
@@ -214,4 +308,3 @@
     "status": "Systems operational"
   }
 }
-
