@@ -20,6 +20,7 @@
       { "label": "Work", "href": "#projects" },
       { "label": "Testimonials", "href": "#testimonials" },
       { "label": "About", "href": "#philosophy" },
+      { "label": "Blog", "href": "/blog" },
       { "label": "Contact", "href": "#contact" }
     ]
   },
