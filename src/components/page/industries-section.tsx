@@ -1,42 +1,61 @@
 "use client"
 
 import { useState, useRef, useEffect } from "react"
-import { MessageSquare, Phone, Workflow, Users, Search, ArrowRight } from "lucide-react"
+import {
+  Wrench,
+  Home,
+  HeartPulse,
+  Zap,
+  Briefcase,
+  ShoppingCart,
+  ArrowRight,
+  TrendingUp,
+} from "lucide-react"
 import { Card } from "@/components/ui/card"
-import siteContent from "@/site.json"
+import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import siteContent from "@/site.json"
 
-const iconMap = { MessageSquare, Phone, Workflow, Users, Search } as const
+const iconMap = {
+  Wrench,
+  Home,
+  HeartPulse,
+  Zap,
+  Briefcase,
+  ShoppingCart,
+} as const
 
-export function AIServicesSection() {
+export function IndustriesSection() {
   const [activeId, setActiveId] = useState<string | null>(null)
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
-  const { aiServices } = siteContent
+  const { industries } = siteContent
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) setIsVisible(true)
       },
-      { threshold: 0.1 },
+      { threshold: 0.05 }
     )
     if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
 
   return (
-    <section id="ai-services" ref={sectionRef} className="relative py-32 px-6 bg-secondary/10">
+    <section id="industries" ref={sectionRef} className="py-32 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-            {aiServices.title} <span className="text-primary">{aiServices.highlight}</span>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            {industries.title} <span className="text-primary">{industries.highlight}</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">{aiServices.description}</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+            {industries.description}
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {aiServices.items.map((item, index) => {
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {industries.items.map((item, index) => {
             const Icon = iconMap[item.icon as keyof typeof iconMap]
             const isActive = activeId === item.id
 
@@ -70,16 +89,12 @@ export function AIServicesSection() {
                 <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">{item.description}</p>
 
-                <div className="flex flex-wrap gap-2">
-                  {item.tech.map((t) => (
-                    <span
-                      key={t}
-                      className={`font-mono text-xs px-2 py-1 transition-all duration-300 ${
-                        isActive ? "bg-primary/20 text-primary" : "bg-secondary/50 text-muted-foreground"
-                      }`}
-                    >
-                      {t}
-                    </span>
+                <div className="space-y-2">
+                  {item.outcomes.map((outcome) => (
+                    <div key={outcome} className="flex items-center gap-2 text-sm text-foreground/80">
+                      <TrendingUp size={14} className="text-primary shrink-0" />
+                      {outcome}
+                    </div>
                   ))}
                 </div>
 
@@ -98,14 +113,13 @@ export function AIServicesSection() {
           })}
         </div>
 
-        <div className="text-center mt-16">
-          <Link
-            href="/ai-services/"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-          >
-            See full AI services details
-            <ArrowRight size={18} />
-          </Link>
+        <div className="text-center">
+          <Button size="lg" className="group rounded-full px-8 h-14 text-base" asChild>
+            <Link href="/#audit">
+              Get Your Free Industry-Specific AI Audit
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

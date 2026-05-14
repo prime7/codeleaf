@@ -4,9 +4,21 @@ import { MatrixFooter } from "@/components/page/matrix-footer"
 import { InsightsList } from "@/components/page/insights-list"
 
 export const metadata: Metadata = {
-  title: "Insights | CodeLeaf",
+  title: "AI Automation Insights for Alberta Businesses | CodeLeaf",
   description:
-    "Practical guidance on AI implementation, technology choices, and real-world results from the CodeLeaf team.",
+    "Practical guidance on AI automation, chatbots, voice agents, and lead generation for Edmonton and Calgary businesses. Learn how Alberta companies are using AI to grow.",
+  keywords: [
+    "AI automation tips Alberta",
+    "AI chatbot guide Edmonton",
+    "AI voice agent Calgary",
+    "lead generation automation Alberta",
+    "AI for small business Canada",
+  ],
+  openGraph: {
+    title: "AI Automation Insights for Alberta Businesses | CodeLeaf",
+    description: "Practical AI automation guidance for Edmonton and Calgary businesses.",
+    url: "https://codeleaf.ca/insights/",
+  },
 }
 
 export default function InsightsPage() {

@@ -4,9 +4,21 @@ import { MatrixFooter } from "@/components/page/matrix-footer"
 import { ArticleLayout } from "@/components/page/article-layout"
 
 export const metadata: Metadata = {
-  title: "How Canadian Businesses Can Start with AI in 2026 | CodeLeaf Insights",
+  title: "How Alberta Businesses Can Start with AI in 2026 | CodeLeaf",
   description:
-    "A practical framework for identifying your first AI use case, choosing between off-the-shelf and custom solutions, and building internal buy-in.",
+    "A practical framework for Edmonton and Calgary businesses to identify their first AI use case, choose the right solution, and build internal buy-in. Free AI readiness audit available.",
+  keywords: [
+    "start with AI Alberta",
+    "AI for small business Edmonton",
+    "AI implementation Calgary",
+    "first AI project Canada",
+    "AI readiness audit Alberta",
+  ],
+  openGraph: {
+    title: "How Alberta Businesses Can Start with AI in 2026 | CodeLeaf",
+    description: "Practical AI framework for Edmonton and Calgary businesses.",
+    url: "https://codeleaf.ca/insights/ai-start-guide/",
+  },
 }
 
 export default function AIStartGuidePage() {

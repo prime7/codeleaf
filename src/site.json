@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "CodeLeaf | AI Implementation Partner",
-    "description": "CodeLeaf is an AI implementation partner that builds production-ready AI systems — from LLM integration and AI agents to workflow automation and custom ML development."
+    "title": "CodeLeaf | AI Automation & Marketing Agency Edmonton & Calgary",
+    "description": "Alberta's leading AI automation agency. We help Edmonton and Calgary businesses generate more leads, automate workflows, and implement AI chatbots, voice agents & CRM automation. Free AI readiness audit."
   },
   "brand": {
     "name": "CodeLeaf",
@@ -9,33 +9,35 @@
     "secondary": "Leaf",
     "lowercasePrimary": "code",
     "lowercaseSecondary": "leaf",
-    "email": "support@codeleaf.ca",
-    "tagline": "AI Implementation That Actually Ships"
+    "email": "hello@codeleaf.ca",
+    "phone": "+1 (780) 555-0142",
+    "location": "Edmonton, Alberta, Canada",
+    "tagline": "AI Automation That Grows Alberta Businesses"
   },
   "navigation": {
-    "ctaLabel": "Start a Project",
-    "ctaHref": "#contact",
+    "ctaLabel": "Free AI Audit",
+    "ctaHref": "#audit",
     "links": [
       { "label": "AI Services", "href": "/ai-services/" },
-      { "label": "Capabilities", "href": "#capabilities" },
-      { "label": "Work", "href": "#projects" },
-      { "label": "Testimonials", "href": "#testimonials" },
+      { "label": "Industries", "href": "#industries" },
+      { "label": "Results", "href": "#projects" },
+      { "label": "Pricing", "href": "#pricing" },
       { "label": "Insights", "href": "/insights/" },
       { "label": "Contact", "href": "#contact" }
     ]
   },
   "hero": {
-    "badge": "Available for new AI projects",
-    "tagline": "We Build AI-Powered Systems That Actually Ship",
+    "badge": "Edmonton & Calgary's AI Automation Partner",
+    "tagline": "Stop Losing Leads to Slow Response Times. We Build AI Chatbots, Voice Agents & Workflow Automation for Alberta Businesses.",
     "services": [
-      { "label": "AI Integration", "icon": "Database" },
-      { "label": "AI Agents", "icon": "Globe" },
-      { "label": "LLM Systems", "icon": "Code" },
-      { "label": "Cloud Solutions", "icon": "Cloud" }
+      { "label": "AI Chatbots", "icon": "Database" },
+      { "label": "Voice AI Agents", "icon": "Globe" },
+      { "label": "CRM Automation", "icon": "Code" },
+      { "label": "Lead Generation", "icon": "Cloud" }
     ],
     "buttons": {
-      "primary": { "label": "Start Your AI Project", "href": "#contact" },
-      "secondary": { "label": "View Our Work", "href": "#projects" }
+      "primary": { "label": "Get Your Free AI Audit", "href": "#audit" },
+      "secondary": { "label": "See Results We've Delivered", "href": "#projects" }
     },
     "stats": [
       { "value": "100+", "label": "Projects" },
@@ -45,52 +47,128 @@
     ],
     "scrollLabel": "Scroll"
   },
+  "leadMagnet": {
+    "title": "Free AI Readiness Audit",
+    "subtitle": "Discover exactly where AI can save your Alberta business time and money — no obligation, 24-hour turnaround.",
+    "benefits": [
+      "Identify your highest-ROI automation opportunities",
+      "Get a clear implementation roadmap & timeline",
+      "See what your competitors are already automating",
+      "Understand PIPEDA-compliant AI deployment"
+    ],
+    "badge": "FREE — $2,500 value",
+    "form": {
+      "nameLabel": "Full Name",
+      "namePlaceholder": "John Smith",
+      "companyLabel": "Company Name",
+      "companyPlaceholder": "Your Business Ltd.",
+      "emailLabel": "Business Email",
+      "emailPlaceholder": "john@yourcompany.com",
+      "phoneLabel": "Phone Number",
+      "phonePlaceholder": "(780) 555-0123",
+      "industryLabel": "Industry",
+      "industryOptions": ["Construction / Trades", "Real Estate", "Healthcare / Medical", "Energy / Oil & Gas", "Professional Services", "Retail / E-commerce", "Agriculture", "Other"],
+      "submitLabel": "Get My Free AI Audit",
+      "submittingLabel": "Submitting...",
+      "successTitle": "Audit Request Received",
+      "successMessage": "We'll analyze your business and send your personalized AI readiness report within 24 hours."
+    }
+  },
+  "industries": {
+    "title": "AI Automation for",
+    "highlight": "Alberta Industries",
+    "description": "We understand the unique challenges of Alberta businesses — from oilfield services in Calgary to clinics in Edmonton and trades across the province.",
+    "items": [
+      {
+        "id": "trades",
+        "icon": "Wrench",
+        "title": "Construction & Trades",
+        "description": "AI chatbots that capture leads after hours, automated scheduling, instant quote generation, and follow-up sequences that turn inquiries into booked jobs.",
+        "outcomes": ["45% more qualified leads", "24/7 instant response", "Automated booking & dispatch"]
+      },
+      {
+        "id": "realestate",
+        "icon": "Home",
+        "title": "Real Estate",
+        "description": "AI-powered property matching, automated showing bookings, lead nurturing via SMS/email, and market analysis reports generated in seconds.",
+        "outcomes": ["3x faster lead response", "Automated showing scheduling", "Smart property matching"]
+      },
+      {
+        "id": "healthcare",
+        "icon": "HeartPulse",
+        "title": "Healthcare & Clinics",
+        "description": "HIPAA-aware patient communication, automated appointment reminders, after-hours intake bots, and PIPEDA-compliant document processing.",
+        "outcomes": ["60% reduction in no-shows", "After-hours patient intake", "Secure automated reminders"]
+      },
+      {
+        "id": "energy",
+        "icon": "Zap",
+        "title": "Energy & Oilfield",
+        "description": "Predictive maintenance alerts, automated compliance reporting, equipment monitoring dashboards, and intelligent dispatch for field crews.",
+        "outcomes": ["35% less downtime", "Automated compliance reports", "Smart crew dispatch"]
+      },
+      {
+        "id": "professional",
+        "icon": "Briefcase",
+        "title": "Professional Services",
+        "description": "Automated client onboarding, AI-powered proposal generation, document intake bots, and CRM workflows that keep your pipeline full.",
+        "outcomes": ["50% faster onboarding", "Automated proposals", "Pipeline automation"]
+      },
+      {
+        "id": "retail",
+        "icon": "ShoppingCart",
+        "title": "Retail & E-commerce",
+        "description": "AI product recommendations, automated inventory alerts, customer support chatbots, and personalized email campaigns that drive repeat sales.",
+        "outcomes": ["28% higher conversion", "Automated stock alerts", "24/7 customer support"]
+      }
+    ]
+  },
   "aiServices": {
     "title": "AI",
     "highlight": "Services",
-    "description": "End-to-end AI implementation — from strategy and LLM selection to production deployment and ongoing optimization.",
+    "description": "Production-ready AI automation that generates leads, reduces costs, and scales your Alberta business — from chatbots to full workflow automation.",
     "items": [
       {
-        "id": "strategy",
-        "icon": "Lightbulb",
-        "title": "AI Strategy & Roadmapping",
-        "description": "We assess your business processes, identify high-ROI AI opportunities, and build a phased roadmap from pilot to scale.",
-        "tech": ["Use Case Analysis", "ROI Modeling", "Feasibility Study", "Risk Assessment"]
-      },
-      {
-        "id": "custom",
-        "icon": "Cpu",
-        "title": "Custom AI Development",
-        "description": "Bespoke AI models and pipelines tailored to your data, compliance requirements, and performance targets.",
-        "tech": ["Python", "PyTorch", "TensorFlow", "Scikit-learn", "Hugging Face", "ONNX"]
-      },
-      {
-        "id": "llm",
+        "id": "chatbots",
         "icon": "MessageSquare",
-        "title": "LLM Integration",
-        "description": "Production-grade LLM integrations with RAG, fine-tuning, prompt engineering, and guardrails for reliable outputs.",
-        "tech": ["OpenAI", "Claude", "LangChain", "LlamaIndex", "Vector DBs", "RAG"]
+        "title": "AI Chatbots & Lead Capture",
+        "description": "24/7 AI chatbots that qualify leads, answer FAQs, and book appointments on your website, Facebook, and SMS. Never miss another after-hours inquiry.",
+        "tech": ["Website Chat", "Facebook Messenger", "SMS Bots", "Lead Qualification", "Appointment Booking"]
+      },
+      {
+        "id": "voice",
+        "icon": "Phone",
+        "title": "AI Voice Agents",
+        "description": "Human-sounding AI voice agents that answer calls, schedule appointments, handle customer service, and route urgent calls — 24/7 without hiring.",
+        "tech": ["Call Answering", "Appointment Scheduling", "Customer Service", "Missed Call Callback", "Multilingual Support"]
       },
       {
         "id": "automation",
         "icon": "Workflow",
         "title": "Workflow Automation",
-        "description": "Intelligent automation of document processing, data extraction, approval workflows, and repetitive business tasks.",
-        "tech": ["n8n", "Make", "Zapier", "OCR", "NLP", "Custom APIs"]
+        "description": "Connect your CRM, email, calendar, and tools with intelligent automation. Auto-follow-ups, task creation, document generation, and data syncing.",
+        "tech": ["CRM Automation", "Email Sequences", "Document AI", "Data Syncing", "Zapier / Make / n8n"]
       },
       {
-        "id": "agents",
-        "icon": "Bot",
-        "title": "AI Agent Development",
-        "description": "Autonomous and semi-autonomous AI agents that handle customer support, research, scheduling, and complex multi-step tasks.",
-        "tech": ["AutoGPT", "CrewAI", "ReAct", "Multi-Agent", "Tool Use", "Memory"]
+        "id": "crm",
+        "icon": "Users",
+        "title": "CRM Setup & Optimization",
+        "description": "Implement and optimize HubSpot, Salesforce, Zoho, or Go High Level with AI-powered lead scoring, automated pipelines, and smart follow-ups.",
+        "tech": ["HubSpot", "Salesforce", "Go High Level", "Zoho", "Lead Scoring", "Pipeline Automation"]
+      },
+      {
+        "id": "seo",
+        "icon": "Search",
+        "title": "AI Search Optimization (GEO)",
+        "description": "Optimize your business to appear in ChatGPT, Claude, and Perplexity recommendations. The new SEO is being cited by AI when customers ask for referrals.",
+        "tech": ["AI Citation Building", "Schema Markup", "Local SEO", "Content Optimization", "Review Management"]
       }
     ]
   },
   "capabilities": {
     "heading": "What we",
     "highlight": "build",
-    "description": "End-to-end technical solutions that transform businesses.",
+    "description": "End-to-end AI solutions that transform how Alberta businesses attract and serve customers.",
     "items": [
       {
         "id": "ai",
@@ -102,8 +180,8 @@
       {
         "id": "web",
         "icon": "Code2",
-        "title": "Web Applications",
-        "description": "Full-stack apps that scale. React, Next.js, Node.js.",
+        "title": "Smart Websites",
+        "description": "High-converting websites with built-in AI chatbots, automated lead capture, and CRM integration.",
         "tech": ["React", "Next.js", "TypeScript", "Vercel", "Cloudflare", "Tailwind CSS", "Framer Motion"]
       },
       {
@@ -137,8 +215,8 @@
     ]
   },
   "projectsShowcase": {
-    "title": "Selected",
-    "highlight": "work",
+    "title": "Real Results for",
+    "highlight": "Alberta Businesses",
     "projects": [
       {
         "id": 1,
@@ -167,16 +245,16 @@
     ]
   },
   "testimonials": {
-    "title": "What our",
-    "highlight": "clients say",
-    "description": "Trusted by businesses across Canada for reliable, innovative AI solutions.",
+    "title": "What Alberta",
+    "highlight": "businesses say",
+    "description": "Trusted by Edmonton, Calgary, and Alberta-wide businesses for reliable AI automation that actually delivers leads and saves time.",
     "items": [
       {
         "id": 1,
         "quote": "The OCR and anomaly detection CodeLeaf built into TaxApp eliminated data entry errors and cut our processing time per return from 45 minutes to under 10. That's a game-changer during tax season.",
         "author": "Aisha Patel",
         "role": "Product Director",
-        "company": "TaxApp",
+        "company": "TaxApp — Edmonton, AB",
         "metric": "78% faster processing",
         "avatar": "/placeholder-avatar-2.jpg"
       },
@@ -185,7 +263,7 @@
         "quote": "Their AI report generation reduced our transcription workload by 60% and caught critical values we previously missed. CodeLeaf understood healthcare compliance from day one.",
         "author": "Dr. Rebecca Torres",
         "role": "Lab Director",
-        "company": "Chroma Care Labs",
+        "company": "Chroma Care Labs — Calgary, AB",
         "metric": "60% less transcription",
         "avatar": "/placeholder-avatar-3.jpg"
       },
@@ -194,31 +272,31 @@
         "quote": "CodeLeaf turned our legacy inventory system into a real-time AI-powered platform. Demand forecasting accuracy improved by 35% and stockouts dropped by half.",
         "author": "Marcus Chen",
         "role": "CTO",
-        "company": "RetailFlow",
+        "company": "RetailFlow — Alberta",
         "metric": "35% better forecasting",
         "avatar": "/placeholder-avatar-4.jpg"
       }
     ]
   },
   "trustSignals": {
-    "title": "Why",
+    "title": "Why Alberta Businesses Choose",
     "highlight": "CodeLeaf",
-    "description": "Enterprise-ready AI implementation with security, process, and expertise you can count on.",
+    "description": "Local expertise, Canadian compliance, and AI automation that generates real business results.",
     "pillars": [
       {
         "icon": "ShieldCheck",
-        "title": "Security & Compliance",
-        "items": ["SOC 2 Type II readiness", "End-to-end encryption", "Role-based access control", "Audit trails & logging", "PIPEDA / HIPAA aware"]
+        "title": "Alberta-Based & PIPEDA Compliant",
+        "items": ["Edmonton-based team", "PIPEDA & FOIP Act aware", "Canadian data sovereignty", "SOC 2 Type II readiness", "End-to-end encryption"]
       },
       {
         "icon": "GitBranch",
         "title": "Proven Process",
-        "items": ["Agile sprints with AI specialists", "Peer-reviewed AI prompts & models", "CI/CD for ML pipelines", "Automated testing & monitoring", "Documented AI decision logs"]
+        "items": ["Free AI readiness audit", "Agile sprints with AI specialists", "Peer-reviewed AI prompts & models", "CI/CD for ML pipelines", "Documented AI decision logs"]
       },
       {
         "icon": "Users",
-        "title": "Expert Team",
-        "items": ["Production LLM experience (GPT-4, Claude, Llama)", "Vector database & RAG architecture", "Prompt engineering & fine-tuning", "MLOps & model monitoring", "Full-stack shipping discipline"]
+        "title": "Local Expertise",
+        "items": ["Alberta energy & trades experience", "Healthcare & clinic compliance", "Real estate MLS integrations", "Prompt engineering & fine-tuning", "Full-stack shipping discipline"]
       }
     ],
     "stats": [
@@ -228,10 +306,39 @@
       { "value": "30+", "label": "AI Systems" }
     ]
   },
+  "pricing": {
+    "title": "Simple",
+    "highlight": "Pricing",
+    "description": "Transparent pricing for Alberta businesses. No hidden fees. Start with a free audit.",
+    "items": [
+      {
+        "name": "Starter",
+        "price": "$1,500",
+        "period": "one-time",
+        "description": "Perfect for small businesses wanting their first AI win.",
+        "features": ["AI Readiness Audit ($2,500 value)", "1 AI Chatbot or Workflow", "CRM Integration", "30-Day Support", "PIPEDA Compliance Review"]
+      },
+      {
+        "name": "Growth",
+        "price": "$3,500",
+        "period": "one-time",
+        "description": "For businesses ready to automate lead generation and customer service.",
+        "popular": true,
+        "features": ["Everything in Starter", "AI Chatbot + Voice Agent", "Lead Capture Automation", "Email/SMS Follow-up Sequences", "90-Day Support & Optimization"]
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "period": "ongoing",
+        "description": "Full AI transformation for larger Alberta organizations.",
+        "features": ["Everything in Growth", "Custom AI Development", "Multiple Workflows & Integrations", "Dedicated Account Manager", "Ongoing Maintenance & Updates"]
+      }
+    ]
+  },
   "insights": {
     "title": "Latest",
     "highlight": "insights",
-    "description": "Practical guidance on AI implementation, technology choices, and real-world results.",
+    "description": "Practical guidance on AI automation, lead generation, and real-world results for Alberta businesses.",
     "articles": [
       {
         "slug": "ai-start-guide",
@@ -250,9 +357,9 @@
     ]
   },
   "philosophy": {
-    "title": "We don't just write code.",
-    "highlight": "We ship AI.",
-    "description": "Based in Edmonton, Alberta, CodeLeaf serves clients across Canada as an AI implementation partner. We navigate LLM selection, prompt engineering, RAG architecture, vector databases, AI agents, and compliance — then build the production software around it. Like a leaf, every project needs the right environment to thrive. We provide the expertise, care, and technical foundation for your AI initiatives to flourish.",
+    "title": "We don't just build tech.",
+    "highlight": "We grow businesses.",
+    "description": "Based in Edmonton, Alberta, CodeLeaf is an AI automation and marketing agency serving businesses across Calgary, Edmonton, and all of Alberta. We specialize in AI chatbots, voice agents, CRM automation, and lead generation systems that help local businesses compete and win in an AI-powered economy. Like a leaf, every business needs the right environment to thrive. We provide the AI automation, strategy, and technical foundation for your business to flourish.",
     "stats": [
       { "value": "100+", "label": "Projects" },
       { "value": "99%", "label": "Retention" },
@@ -260,51 +367,61 @@
     ]
   },
   "contact": {
-    "title": "Let's build your AI system",
-    "subtitle": "Tell us about your AI challenge. We'll architect the solution.",
+    "title": "Ready to Automate Your Business?",
+    "subtitle": "Get your free AI readiness audit or book a 15-minute call. We'll respond within 24 hours.",
     "loadingText": "Loading form interface...",
     "processingText": "Processing request...",
     "commandHistory": [
-      { "cmd": "codeleaf --help", "response": "Available commands: contact, projects, about" },
+      { "cmd": "codeleaf --help", "response": "Available commands: audit, contact, projects" },
       { "cmd": "codeleaf contact --init", "response": "Initializing contact form..." }
     ],
     "commandTemplate": "codeleaf contact --send --name=\"{name}\" --email=\"{email}\"",
     "form": {
       "labels": {
-        "name": "Name",
-        "email": "Email",
-        "project": "Project details"
+        "name": "Full Name",
+        "email": "Business Email",
+        "company": "Company Name",
+        "phone": "Phone Number",
+        "project": "What would you like to automate?"
       },
       "placeholders": {
-        "name": "Your name",
-        "email": "you@company.com",
-        "project": "Tell us about your AI project..."
+        "name": "John Smith",
+        "email": "john@company.com",
+        "company": "Your Business Ltd.",
+        "phone": "(780) 555-0123",
+        "project": "e.g., AI chatbot for our website, automate lead follow-ups, voice agent for missed calls..."
       },
-      "submit": "Send Message",
-      "submitting": "Sending...",
-      "successTitle": "Message sent",
-      "successSubtitle": "We'll be in touch within 24 hours."
+      "submit": "Get My Free AI Audit",
+      "submitting": "Submitting...",
+      "successTitle": "Request Received!",
+      "successSubtitle": "We'll be in touch within 24 hours with your free AI readiness audit."
     }
   },
   "footer": {
-    "description": "AI implementation partner for Canadian businesses. From strategy to production — LLMs, agents, automation, and the software that powers them. Based in Edmonton, Alberta.",
+    "description": "AI automation and marketing agency for Alberta businesses. We build AI chatbots, voice agents, CRM automation, and lead generation systems. Based in Edmonton, serving Calgary and all of Alberta.",
     "headings": {
       "navigation": "Navigate",
-      "connect": "Connect"
+      "connect": "Connect",
+      "contact": "Contact"
     },
     "navigation": [
       { "label": "AI Services", "href": "/ai-services/" },
-      { "label": "Capabilities", "href": "#capabilities" },
-      { "label": "Work", "href": "#projects" },
-      { "label": "Testimonials", "href": "#testimonials" },
+      { "label": "Industries", "href": "#industries" },
+      { "label": "Results", "href": "#projects" },
+      { "label": "Pricing", "href": "#pricing" },
       { "label": "Insights", "href": "/insights/" },
       { "label": "Contact", "href": "#contact" }
     ],
     "connect": [
-      { "label": "GitHub", "href": "#" },
-      { "label": "LinkedIn", "href": "#" },
-      { "label": "Twitter", "href": "#" }
+      { "label": "LinkedIn", "href": "https://linkedin.com/company/codeleaf" },
+      { "label": "Twitter / X", "href": "https://twitter.com/codeleaf" },
+      { "label": "GitHub", "href": "https://github.com/codeleaf" }
     ],
+    "contactInfo": {
+      "email": "hello@codeleaf.ca",
+      "phone": "+1 (780) 555-0142",
+      "location": "Edmonton, Alberta, Canada"
+    },
     "status": "Systems operational"
   }
 }

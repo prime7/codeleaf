@@ -13,12 +13,14 @@ import {
   FlaskConical,
   Rocket,
   CheckCircle2,
+  Phone,
+  Users,
 } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import siteContent from "@/site.json"
 
-const iconMap = { Lightbulb, Cpu, MessageSquare, Workflow, Bot } as const
+const iconMap = { Lightbulb, Cpu, MessageSquare, Workflow, Bot, Phone, Search, Users } as const
 
 const methodology = [
   {

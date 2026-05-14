@@ -4,9 +4,21 @@ import { MatrixFooter } from "@/components/page/matrix-footer"
 import { ArticleLayout } from "@/components/page/article-layout"
 
 export const metadata: Metadata = {
-  title: "LLM vs. Traditional ML: Which is Right for Your Use Case? | CodeLeaf Insights",
+  title: "LLM vs Traditional ML: Which is Right for Your Alberta Business? | CodeLeaf",
   description:
-    "When to use large language models versus classical machine learning — and why the wrong choice can cost you 6 months and $100K.",
+    "When should Edmonton and Calgary businesses use large language models vs classical machine learning? A practical decision framework from Alberta's AI automation agency.",
+  keywords: [
+    "LLM vs ML Alberta",
+    "AI technology choice Edmonton",
+    "machine learning Calgary",
+    "AI model selection Canada",
+    "RAG vs fine tuning Alberta",
+  ],
+  openGraph: {
+    title: "LLM vs Traditional ML: Which is Right for Your Alberta Business? | CodeLeaf",
+    description: "Practical decision framework for Alberta businesses choosing AI technology.",
+    url: "https://codeleaf.ca/insights/llm-vs-traditional-ml/",
+  },
 }
 
 export default function LLMvsMLPage() {
