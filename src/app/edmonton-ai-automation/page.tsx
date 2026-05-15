@@ -1,6 +1,4 @@
 import type { Metadata } from "next"
-import { TerminalNav } from "@/components/page/terminal-nav"
-import { MatrixFooter } from "@/components/page/matrix-footer"
 import { CityPageTemplate } from "@/components/page/cities/city-page-template"
 
 export const metadata: Metadata = {
@@ -33,7 +31,6 @@ export default function EdmontonPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background noise">
       <div className="grid-pattern fixed inset-0 pointer-events-none" />
-      <TerminalNav />
       <CityPageTemplate
         city="Edmonton"
         region="Northern Alberta"
@@ -56,7 +53,6 @@ export default function EdmontonPage() {
           { label: "Local Clients", value: "20+" },
         ]}
       />
-      <MatrixFooter />
     </main>
   )
 }

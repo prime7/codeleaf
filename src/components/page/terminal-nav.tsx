@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Leaf } from "lucide-react"
+import { Leaf, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import siteContent from "@/site.json"
 
 export function TerminalNav() {
   const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
   const { brand, navigation } = siteContent
 
   useEffect(() => {
@@ -15,6 +16,10 @@ export function TerminalNav() {
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  // Close mobile menu on route change (Next.js link clicks don't trigger popstate,
+  // so we use a simple click listener on mobile links)
+  const handleMobileLinkClick = () => setMobileOpen(false)
 
   return (
     <nav
@@ -59,15 +64,55 @@ export function TerminalNav() {
             <Button
               asChild
               variant="outline"
-              className="group flex items-center gap-2 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary"
+              className="group hidden sm:flex items-center gap-2 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary"
             >
               <Link href={navigation.ctaHref}>
                 <span className="w-1.5 h-1.5 bg-primary rounded-full group-hover:bg-primary-foreground transition-colors" />
                 {navigation.ctaLabel}
               </Link>
             </Button>
+
+            {/* Mobile hamburger */}
+            <button
+              className="md:hidden p-2 -mr-2 text-muted-foreground hover:text-foreground transition-colors"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+              aria-expanded={mobileOpen}
+            >
+              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
           </div>
         </div>
+
+        {/* Mobile menu dropdown */}
+        {mobileOpen && (
+          <div className="md:hidden mt-4 pb-2 border-t border-primary/10 pt-4 space-y-3">
+            <Link
+              href="/ai-services/"
+              onClick={handleMobileLinkClick}
+              className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
+            >
+              AI Services
+            </Link>
+            <Link
+              href="/insights/"
+              onClick={handleMobileLinkClick}
+              className="block text-sm text-muted-foreground hover:text-foreground transition-colors py-1"
+            >
+              Insights
+            </Link>
+            <Button
+              asChild
+              variant="outline"
+              className="group flex items-center gap-2 border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground hover:border-primary w-full mt-2"
+            >
+              <Link href={navigation.ctaHref} onClick={handleMobileLinkClick}>
+                <span className="w-1.5 h-1.5 bg-primary rounded-full group-hover:bg-primary-foreground transition-colors" />
+                {navigation.ctaLabel}
+              </Link>
+            </Button>
+          </div>
+        )}
       </div>
     </nav>
   )

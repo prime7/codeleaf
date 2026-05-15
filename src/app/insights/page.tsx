@@ -1,6 +1,4 @@
 import type { Metadata } from "next"
-import { TerminalNav } from "@/components/page/terminal-nav"
-import { MatrixFooter } from "@/components/page/matrix-footer"
 import { InsightsList } from "@/components/page/insights-list"
 import { getAllPosts } from "@/lib/blog"
 
@@ -35,9 +33,7 @@ export default function InsightsPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background noise">
       <div className="grid-pattern fixed inset-0 pointer-events-none" />
-      <TerminalNav />
       <InsightsList posts={posts} />
-      <MatrixFooter />
     </main>
   )
 }

@@ -1,7 +1,5 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { TerminalNav } from "@/components/page/terminal-nav"
-import { MatrixFooter } from "@/components/page/matrix-footer"
 import { ArticleLayout } from "@/components/page/article-layout"
 import { getAllPosts, getPostBySlug, markdownToHtml } from "@/lib/blog"
 
@@ -61,7 +59,6 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background noise">
       <div className="grid-pattern fixed inset-0 pointer-events-none" />
-      <TerminalNav />
       <ArticleLayout
         title={post.title}
         category={post.category}
@@ -75,7 +72,6 @@ export default async function BlogPostPage({ params }: Props) {
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
       </ArticleLayout>
-      <MatrixFooter />
     </main>
   )
 }

@@ -33,7 +33,9 @@ export function Navigation() {
         </div>
 
         <div className="hidden md:block">
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Get in Touch</Button>
+          <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Link href="/#contact">Get in Touch</Link>
+          </Button>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -56,7 +58,9 @@ export function Navigation() {
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full mt-2">Get in Touch</Button>
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground w-full mt-2">
+              <Link href="/#contact">Get in Touch</Link>
+            </Button>
           </div>
         </div>
       )}

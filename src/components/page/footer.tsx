@@ -6,22 +6,22 @@ import { Linkedin, Twitter, Github } from "lucide-react"
 
 const footerLinks = {
   services: [
-    { label: "Web Applications", href: "#" },
-    { label: "Mobile Development", href: "#" },
-    { label: "Cloud Architecture", href: "#" },
-    { label: "API Development", href: "#" },
+    { label: "AI Services", href: "/ai-services/" },
+    { label: "Chatbots", href: "/ai-services/" },
+    { label: "Voice Agents", href: "/ai-services/" },
+    { label: "CRM Automation", href: "/ai-services/" },
   ],
   company: [
-    { label: "About", href: "#about" },
-    { label: "Process", href: "#process" },
-    { label: "Work", href: "#work" },
+    { label: "About", href: "/" },
+    { label: "Process", href: "/#projects" },
+    { label: "Work", href: "/#projects" },
     { label: "Careers", href: "#" },
   ],
   resources: [
-    { label: "Blog", href: "#" },
-    { label: "Case Studies", href: "#" },
-    { label: "Documentation", href: "#" },
-    { label: "FAQ", href: "#" },
+    { label: "Blog", href: "/insights/" },
+    { label: "Case Studies", href: "/#projects" },
+    { label: "Documentation", href: "/ai-services/" },
+    { label: "FAQ", href: "/ai-services/" },
   ],
 }
 
@@ -40,21 +40,27 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://linkedin.com/company/codeleaf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-background/20 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://twitter.com/codeleaf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-background/20 transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://github.com/codeleaf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-background/20 transition-colors"
                 aria-label="GitHub"
               >

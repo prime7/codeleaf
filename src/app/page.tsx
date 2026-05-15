@@ -1,4 +1,3 @@
-import { TerminalNav } from "@/components/page/terminal-nav"
 import { ImmersiveHero } from "@/components/page/immersive-hero"
 import { LeadMagnetSection } from "@/components/page/lead-magnet-section"
 import { IndustriesSection } from "@/components/page/industries-section"
@@ -10,7 +9,6 @@ import { PricingSection } from "@/components/page/pricing-section"
 import { InsightsSection } from "@/components/page/insights-section"
 import { PhilosophySection } from "@/components/page/philosophy-section"
 import { TerminalContact } from "@/components/page/terminal-contact"
-import { MatrixFooter } from "@/components/page/matrix-footer"
 import { getAllPosts } from "@/lib/blog"
 
 export default function HomePage() {
@@ -25,7 +23,6 @@ export default function HomePage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-background noise">
       <div className="grid-pattern fixed inset-0 pointer-events-none" />
-      <TerminalNav />
       <ImmersiveHero />
       <LeadMagnetSection />
       <IndustriesSection />
@@ -37,7 +34,6 @@ export default function HomePage() {
       <InsightsSection posts={posts} />
       <PhilosophySection />
       <TerminalContact />
-      <MatrixFooter />
     </main>
   )
 }

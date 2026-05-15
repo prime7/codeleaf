@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google"
 import siteContent from "@/site.json"
 import { Analytics } from "@/components/analytics"
+import { TerminalNav } from "@/components/page/terminal-nav"
+import { MatrixFooter } from "@/components/page/matrix-footer"
 import "./globals.css"
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
@@ -137,7 +139,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${spaceGrotesk.className} ${jetbrainsMono.variable} font-sans antialiased`}>
+        <TerminalNav />
         {children}
+        <MatrixFooter />
         <Analytics />
       </body>
     </html>

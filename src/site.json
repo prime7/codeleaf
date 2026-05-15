@@ -16,14 +16,14 @@
   },
   "navigation": {
     "ctaLabel": "Free AI Audit",
-    "ctaHref": "#audit",
+    "ctaHref": "/#audit",
     "links": [
       { "label": "AI Services", "href": "/ai-services/" },
-      { "label": "Industries", "href": "#industries" },
-      { "label": "Results", "href": "#projects" },
-      { "label": "Pricing", "href": "#pricing" },
+      { "label": "Industries", "href": "/#industries" },
+      { "label": "Results", "href": "/#projects" },
+      { "label": "Pricing", "href": "/#pricing" },
       { "label": "Insights", "href": "/insights/" },
-      { "label": "Contact", "href": "#contact" }
+      { "label": "Contact", "href": "/#contact" }
     ]
   },
   "hero": {
@@ -36,8 +36,8 @@
       { "label": "Lead Generation", "icon": "Cloud" }
     ],
     "buttons": {
-      "primary": { "label": "Get Your Free AI Audit", "href": "#audit" },
-      "secondary": { "label": "See Results We've Delivered", "href": "#projects" }
+      "primary": { "label": "Get Your Free AI Audit", "href": "/#audit" },
+      "secondary": { "label": "See Results We've Delivered", "href": "/#projects" }
     },
     "stats": [
       { "value": "100+", "label": "Projects" },
@@ -372,11 +372,11 @@
     },
     "navigation": [
       { "label": "AI Services", "href": "/ai-services/" },
-      { "label": "Industries", "href": "#industries" },
-      { "label": "Results", "href": "#projects" },
-      { "label": "Pricing", "href": "#pricing" },
+      { "label": "Industries", "href": "/#industries" },
+      { "label": "Results", "href": "/#projects" },
+      { "label": "Pricing", "href": "/#pricing" },
       { "label": "Insights", "href": "/insights/" },
-      { "label": "Contact", "href": "#contact" }
+      { "label": "Contact", "href": "/#contact" }
     ],
     "connect": [
       { "label": "LinkedIn", "href": "https://linkedin.com/company/codeleaf" },

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Leaf } from "lucide-react"
 
@@ -40,16 +41,19 @@ export function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group">
-            Start Your Project
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground group" asChild>
+            <Link href="/#audit">
+              Start Your Project
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="border-primary text-primary hover:bg-primary/10 bg-transparent"
+            asChild
           >
-            View Our Work
+            <Link href="/#projects">View Our Work</Link>
           </Button>
         </div>
 

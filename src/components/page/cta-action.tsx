@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 
@@ -15,16 +16,19 @@ export function CTASection() {
           starts with a conversation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 group">
-            Start a Conversation
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          <Button size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 group" asChild>
+            <Link href="/#contact">
+              Start a Conversation
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
+            asChild
           >
-            View Our Process
+            <Link href="/#projects">View Our Process</Link>
           </Button>
         </div>
       </div>
